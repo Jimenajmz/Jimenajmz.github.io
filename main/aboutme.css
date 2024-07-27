@@ -1,5 +1,5 @@
 body {
-    background-image: url('images/grey.jpeg');
+    background-image: url('images/star.gif');
     letter-spacing: 1px;
     text-align: justify;
     font-size: 13px;
@@ -10,10 +10,13 @@ body {
 }
 
 .title-container {
-    background-color: white;
+    background-color: rgb(28, 39, 26, 0.1);
     text-align: center;
     padding: 20px;
-    border-bottom: 6px solid #dac33b;
+}
+
+.title-container h1 {
+    color: white; /* Set the color of the Welcome text to white */
 }
 
 .intro-container {
@@ -37,16 +40,16 @@ body {
 
 .sidebar {
     flex: 1;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    border-top: 6px solid #474747;
+    border-top: 6px solid #2c1d31;
 }
 
 .post {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid #a5a5a5;
+    border: 1px solid #eff2ff;
 }
 
 h1, h2 {
