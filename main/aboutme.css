@@ -70,13 +70,12 @@ a:hover {
 
 
 .star {
-    position: absolute;
-    top: -20px;
-    color: #fff;
-    animation: animate 5s linear forwards;
-    /* you can set infinite too */
-  }
-  
+  position: absolute;
+  top: -20px;
+  color: rgba(255, 255, 255, var(--opacity));
+  animation: animate 5s linear forwards;
+  /* you can set infinite too */
+}
   .star::before {
     content: "\f005";
     font-family: FontAwesome;
