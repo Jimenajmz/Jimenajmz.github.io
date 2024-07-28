@@ -6,6 +6,7 @@ body {
     line-height: 20px;
     font-family: 'Mate', serif;
     margin: 0;
+    cursor: url('images/cursor.cur'), auto;
     padding: 0;
 }
 
