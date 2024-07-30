@@ -1,12 +1,12 @@
 body {
-    background-image: url('images/star.gif');
+    background-image: url('../images/star.gif');
     letter-spacing: 1px;
     text-align: justify;
     font-size: 13px;
     line-height: 20px;
     font-family: 'Mate', serif;
     margin: 0;
-    cursor: url('images/cursor.cur'), auto;
+    cursor: url('../images/cursor.cur'), auto;
     padding: 0;
 }
 
@@ -37,28 +37,84 @@ body {
 .main-content {
     flex: 3;
     padding-right: 20px;
+    width: 1000px;
 }
 
-.sidebar {
+  .sidebar {
     flex: 1;
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-top: 6px solid #2c1d31;
-}
+    padding: 10px;
+    border-top: 10px solid #2c1d31;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 200px; /* Set the width to 200px */
+
+  }
+
+  .navi-links {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    
+  }
+
+  .navi-links a {
+    background-color: #b89cc2;
+    color: rgb(86, 43, 99);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  .navi-links a.active {
+    background-color: rgb(134, 77, 156);
+    color: rgb(39, 18, 49);
+  }
+
+  .navi-links a:hover {
+    background-color: #5e2b6e;
+    color: white;
+    text-decoration: none; /* Remove underline on hover */
+    cursor: url(../images/Gengar_Cursor.cur),auto; /* Gengar cursor: http://www.rw-designer.com/cursor-detail/119835*/
+  }
+  .navigation-title {
+    background-color: #2c1d31;
+    font-size: 20px;
+    color: rgb(134, 77, 156);
+    border-radius: 13px;
+    letter-spacing: 3px;
+    height: 40px; /* Set the height to 200px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 200px; /* Set the width to 200px */
+  }
 
 .post {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     margin-bottom: 20px;
-    border: 1px solid #eff2ff;
+    border: 1px solid rgb(134, 77, 156);
+    max-width: 1000px;
 }
 
 h1, h2 {
     font-family: 'Lustria', serif;
 }
 
+ul {
+  /* 
+    This is for editing the navigation list bullet points and stuff
+  */
+}
+
 a {
     display: block;
+    font-size: 16px;
     margin-bottom: 10px;
     color: #000;
     text-decoration: none;

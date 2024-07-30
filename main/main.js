@@ -27,9 +27,9 @@ function stars() {
     // Generate a random number between 4 and 100
     const randomSize = Math.random() * (100 - 4) + 4
 
-    // Edit randomSize that is 99x more likely to be a number between 0-12 than from 13-100
+    // Edit randomSize that is 99.7x more likely to be a number between 0-12 than from 13-100
     if (randomSize > 12) {
-      const probability = 0.99; // Adjust the probability based on the range
+      const probability = 0.997; // Adjust the probability based on the range
       if (Math.random() > probability) {
         return Math.floor(randomSize);
       } else {
