@@ -129,7 +129,7 @@ body {
 	min-width: 50%;
   border-radius: 10px;
   padding-right: 20px;
-  height: 200px;
+  height: 350px;
 }
 
 .right-stuff {
@@ -140,7 +140,12 @@ body {
   width: 1000px;
 	min-width: 50%;
   border-radius: 10px;
-  height: 200px;
+  height: 350px;
+}
+
+.ghost-cat {
+  width: 250px; /* Maintain the width */
+  margin-top: 15px; /* Optional: Add some margin for spacing */
 }
 
 h1, h2 {
