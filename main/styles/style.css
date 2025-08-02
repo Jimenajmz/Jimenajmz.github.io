@@ -8,6 +8,7 @@ body {
     margin: 0;
     cursor: url('../images/cursor.cur'), auto;
     padding: 0;
+    overflow-x:hidden;
 }
 
 .title-container {
