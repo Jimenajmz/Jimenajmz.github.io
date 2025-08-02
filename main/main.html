@@ -69,7 +69,7 @@
                 </p>
         </div>
     </div>
-    
+    <div id="snow-container"></div>
     <!-- The Star animation is from -> https://codepen.io/StarKnightt/pen/eYxXxaR -->
     <!-- <img src="images/star.png" class="star" alt="Falling Star"> -->
     <script src="main.js"></script>
@@ -104,7 +104,7 @@
             var rats=createDiv(3, 3);
             rats.style.visibility="hidden";
             rats.style.zIndex="999";
-            document.body.appendChild(tiny[i]=rats);
+            document.getElementById('snow-container').appendChild(tiny[i]=rats);
             starv[i]=0;
             tinyv[i]=0;
             var rats=createDiv(5, 5);
@@ -119,7 +119,7 @@
             rlef.style.left="0px";
             rdow.style.top="0px";
             rdow.style.left="2px";
-            document.body.appendChild(star[i]=rats);
+            document.getElementById('snow-container').appendChild(star[i]=rats);
           }
           set_width();
           sparkle();

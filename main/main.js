@@ -1,7 +1,7 @@
 function stars() {
     let e = document.createElement("div");
     e.setAttribute("class", "star");
-    document.body.appendChild(e);
+    document.getElementById('snow-container').appendChild(e);
     e.style.left = Math.random() * +innerWidth + "px";
   
     let size = Math.random() * 12;
