@@ -26,7 +26,7 @@ This is Jimena's personal site, built to her requirements brief (October 2026): 
 
 ## How a change goes live
 
-A push to `main` runs `.github/workflows/deploy.yml`: build, test, upload to AWS, refresh the cache. About two minutes. When more than one person is editing, work on a branch and open a pull request.
+A push to `main` runs two workflows: `pages.yml` builds the site and publishes it to GitHub Pages (jimenajmz.com, while the domain points there), and `deploy.yml` uploads the same build to the AWS hosting. About two minutes. Until the first merge, the new site lives on a branch; pushing to that branch changes nothing live. When more than one person is editing, work on a branch and open a pull request.
 
 ## The look, in her words
 
