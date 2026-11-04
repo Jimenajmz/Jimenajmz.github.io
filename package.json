@@ -1,0 +1,14 @@
+{
+  "name": "jimenajmz.com",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Jimena's website: hand-written pages plus text files that Eleventy turns into pages.",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "test": "node scripts/check-build.mjs"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}

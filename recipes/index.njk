@@ -1,0 +1,12 @@
+---
+title: Recipes
+---
+<p>Things I cook, in alphabetical order.</p>
+{% if collections.recipes.length == 0 %}
+<p>No recipes yet. The first one is a text file in the <code>recipes</code> folder; copy <code>templates/recipe.md</code> to start.</p>
+{% endif %}
+<ul class="card-list">
+{% for r in collections.recipes %}
+  <li><a href="{{ r.url }}">{{ r.data.title }}</a>{% if r.data.summary %}<span class="summary">{{ r.data.summary }}</span>{% endif %}</li>
+{% endfor %}
+</ul>

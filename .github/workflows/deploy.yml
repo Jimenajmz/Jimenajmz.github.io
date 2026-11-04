@@ -1,0 +1,35 @@
+# Publishes the site when main changes: build, test, upload to AWS, refresh the cache.
+# Signs in to AWS through GitHub's identity token (no stored keys). The role, bucket and
+# distribution below belong to the JimenaSiteStack in infra/.
+name: Deploy the site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+concurrency: deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: arn:aws:iam::045738173554:role/jimenajmz-github-deploy
+          aws-region: us-east-1
+      - name: Upload the built site
+        run: aws s3 sync _site "s3://jimenajmz-site-045738173554" --delete --cache-control "public, max-age=300"
+      - name: Refresh the cache
+        run: aws cloudfront create-invalidation --distribution-id "DISTRIBUTION_ID" --paths "/*"

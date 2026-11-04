@@ -1,0 +1,22 @@
+/* Small additions for the text pages (recipes, posts, art). Jimena's own
+   stylesheet is main/styles/style.css; this only adjusts the card for long content. */
+.post.page { height: auto; min-height: 270px; text-align: left; }
+/* Her sidebar is a fixed 280px tall, which fits four links; the text pages have five. */
+.sidebar { height: auto; min-height: 280px; }
+.post.page p, .post.page li { text-align: left; }
+.post.page img { max-width: 100%; height: auto; border-radius: 10px; border: 1px solid rgb(134, 77, 156); }
+.post.page h2 { text-align: left; font-size: 20px; margin-top: 24px; }
+.post.page .meta { color: rgb(86, 43, 99); font-size: 12px; text-align: left; margin-top: -8px; }
+.card-list { list-style: none; padding: 0; margin: 0; }
+.card-list li { margin-bottom: 12px; }
+.card-list a { display: inline; font-family: 'Lustria', serif; font-size: 18px; color: rgb(86, 43, 99); }
+.card-list .summary { display: block; color: #333; }
+.card-list .when { color: rgb(86, 43, 99); font-size: 12px; margin-left: 6px; }
+.art-grid { display: flex; flex-wrap: wrap; gap: 16px; }
+.art-grid figure { margin: 0; width: 220px; }
+.art-grid img { width: 220px; height: 220px; object-fit: cover; border-radius: 10px; border: 1px solid rgb(134, 77, 156); }
+.art-grid figcaption { text-align: center; font-size: 13px; }
+@media screen and (max-width: 700px) {
+  .top { flex-direction: column; }
+  .sidebar { max-width: none; height: auto; margin-top: 12px; }
+}

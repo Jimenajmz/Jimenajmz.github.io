@@ -1,0 +1,12 @@
+---
+title: Blog
+---
+<p>Notes, newest first.</p>
+{% if collections.posts.length == 0 %}
+<p>No posts yet. A post is a text file in the <code>posts</code> folder named like <code>2026-11-10-my-title.md</code>; copy <code>templates/post.md</code> to start.</p>
+{% endif %}
+<ul class="card-list">
+{% for p in collections.posts %}
+  <li><a href="{{ p.url }}">{{ p.data.title }}</a><span class="when">{{ p.date | niceDate }}</span>{% if p.data.summary %}<span class="summary">{{ p.data.summary }}</span>{% endif %}</li>
+{% endfor %}
+</ul>
