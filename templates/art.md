@@ -1,8 +1,19 @@
 ---
 title: Parrot study
-image: /images/parrot-study.jpg
-medium: Watercolour
+created: 2026-11-10
+medium: illustration
+tags: [parrots]
+location:
+credits:
+media:
+  - src: /images/parrot-study.jpg
+    alt: A watercolour of a green parrot on a branch
+    caption: optional caption
+  - src: /images/parrot-study-detail.jpg
+    alt: Close-up of the parrot's head
 ---
-<!-- Copy this file to art/parrot-study.md and put the picture in images/. The picture shows at the top of the page and in the Art grid. Delete this comment. -->
+<!-- Copy this file to art/parrot-study.md (the file name becomes the web address). Pictures go in images/.
+     created = when the piece was made (the year becomes a filter tag). medium = a filter tag too.
+     A video: use "video: /videos/clip.mp4" or "youtube: VIDEOID" instead of src. Delete this comment. -->
 
-A line about the piece, if you want one.
+A line or two about the piece.

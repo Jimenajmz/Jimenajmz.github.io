@@ -1,0 +1,54 @@
+---
+title: Home
+layout: base.njk
+permalink: /index.html
+description: Jimena Jimenez. Art, photography, recipes, writing and projects from Rochester, Minnesota.
+---
+<section class="hero">
+    <div>
+        <p class="pen">hi, welcome in</p>
+        <h1>I'm Jimena. I make things.</h1>
+        <p class="lead">Art, photographs, recipes, writing and a few bigger projects, collected in one place. Born and raised in Minnesota, electrical engineer by day, maker the rest of the time.</p>
+        <p class="meta"><a href="/art/">Start with the art →</a></p>
+    </div>
+    <figure class="hero-photo">
+        <span class="tape tape-center" aria-hidden="true"></span>
+        <img src="/images/about-sample-1.png" alt="Placeholder, a photo of Jimena goes here">
+        <figcaption class="pencil">a photo goes here</figcaption>
+    </figure>
+</section>
+
+<div class="section-title"><h2>Find your way</h2><span class="meta">seven sections</span></div>
+<nav class="map" aria-label="Sections">
+    {% set a = collections.art | first %}
+    <a href="/art/">{% if a %}<img src="{{ a | thumb }}" alt="">{% else %}<span class="blank">art</span>{% endif %}<span><h3>Art</h3><p>Illustration, printmaking, crochet. Newest first, filter by medium or year.</p></span></a>
+    {% set ph = collections.photography | first %}
+    <a href="/photography/">{% if ph %}<img src="{{ ph | thumb }}" alt="">{% else %}<span class="blank">photo</span>{% endif %}<span><h3>Photography</h3><p>Pictures, by place and subject.</p></span></a>
+    <a href="/about/"><img src="/images/about-sample-2.png" alt=""><span><h3>About me</h3><p>Who I am and what I do.</p></span></a>
+    {% set r = collections.recipes | first %}
+    <a href="/recipes/">{% if r and r.data.images %}<img src="{{ r.data.images[0].src }}" alt="">{% else %}<span class="blank">food</span>{% endif %}<span><h3>Recipes</h3><p>Costa Rican, Minnesotan, and picked up along the way.</p></span></a>
+    <a href="/blog/"><span class="blank">words</span><span><h3>Blog</h3><p>Notes and longer thoughts, newest first.</p></span></a>
+    {% set pj = collections.projects | first %}
+    <a href="/projects/">{% if pj and pj.data.photos %}<img src="{{ pj.data.photos[0].src }}" alt="">{% else %}<span class="blank">work</span>{% endif %}<span><h3>Projects</h3><p>The makerspace, engineering, and MenezMade.</p></span></a>
+</nav>
+
+{% if collections.art.length or collections.photography.length %}
+<div class="section-title"><h2>Latest</h2><span class="meta"><a href="/art/">all art</a> · <a href="/photography/">all photos</a></span></div>
+<ul class="tiles" style="margin-bottom: 44px">
+{% for item in collections.art | take(2) %}
+    <li class="tile"><a href="{{ item.url }}"><img src="{{ item | thumb }}" alt="{{ item.data.title }}" loading="lazy"><span class="tile-title">{{ item.data.title }}</span></a></li>
+{% endfor %}
+{% for item in collections.photography | take(2) %}
+    <li class="tile"><a href="{{ item.url }}"><img src="{{ item | thumb }}" alt="{{ item.data.title }}" loading="lazy"><span class="tile-title">{{ item.data.title }}</span></a></li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% if collections.projects.length %}
+<section class="kraft">
+    <div class="wrap">
+        <div><h2>Projects</h2><p class="pencil">the bigger stories</p></div>
+        <ul>{% for p in collections.projects %}<li><a href="{{ p.url }}"><strong>{{ p.data.title }}</strong>{{ p.data.summary }}</a></li>{% endfor %}</ul>
+    </div>
+</section>
+{% endif %}

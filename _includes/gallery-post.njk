@@ -1,0 +1,31 @@
+---
+layout: base.njk
+---
+{% set items = collections[gallery] %}
+<div class="post-head">
+    <p class="meta"><a href="/{{ gallery }}/">{{ gallery }}</a> · {{ (created or page.date) | year }}</p>
+    <h1>{{ title }}</h1>
+</div>
+<div class="detail">
+    {% set label = title %}
+    {% include "viewer.njk" %}
+    <aside class="details">
+        <dl>
+            {% if created %}<dt>Made</dt><dd>{{ created | niceDate }}</dd>{% endif %}
+            <dt>Posted</dt><dd>{{ page.date | niceDate }}</dd>
+            {% if medium %}<dt>Medium</dt><dd>{{ medium }}</dd>{% endif %}
+            {% if location %}<dt>Where</dt><dd>{{ location }}</dd>{% endif %}
+            {% if credits %}<dt>Credits</dt><dd>{{ credits }}</dd>{% endif %}
+        </dl>
+        <div class="body">
+{{ content | safe }}
+        </div>
+        {% set mine = { data: { medium: medium, created: created, tags: tags }, date: page.date } | tagsOf %}
+        <div class="tagline">{% for t in mine %}<a href="/{{ gallery }}/?tag={{ t }}">{{ t }}</a>{% endfor %}</div>
+    </aside>
+</div>
+{% set newer = items | getPreviousCollectionItem %}{% set older = items | getNextCollectionItem %}
+<nav class="pager" aria-label="More">
+    <span>{% if newer %}<a href="{{ newer.url }}">← newer: {{ newer.data.title }}</a>{% endif %}</span>
+    <span>{% if older %}<a href="{{ older.url }}">older: {{ older.data.title }} →</a>{% endif %}</span>
+</nav>

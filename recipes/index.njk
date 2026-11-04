@@ -1,12 +1,14 @@
 ---
 title: Recipes
+layout: base.njk
 ---
-<p>Things I cook, in alphabetical order.</p>
-{% if collections.recipes.length == 0 %}
-<p>No recipes yet. The first one is a text file in the <code>recipes</code> folder; copy <code>templates/recipe.md</code> to start.</p>
-{% endif %}
-<ul class="card-list">
-{% for r in collections.recipes %}
-  <li><a href="{{ r.url }}">{{ r.data.title }}</a>{% if r.data.summary %}<span class="summary">{{ r.data.summary }}</span>{% endif %}</li>
+<div class="page-head"><h1>Recipes</h1></div>
+<p class="recipes-intro">Hello, and welcome to my collection of recipes! I was born and raised in Minnesota, USA, and I am a second-generation Costa Rican immigrant. This collection includes recipes I grew up with as well as recipes I have picked up over the years.</p>
+{% for cat in ['Appetizers', 'Breakfast', 'Lunch', 'Dinner', 'Desserts', 'Snacks'] %}
+{% set rs = collections.recipes | inCategory(cat) %}
+<section class="category">
+    <h2>{{ cat }}</h2>
+    {% if rs.length %}<ul>{% for r in rs %}<li><a href="{{ r.url }}">{{ r.data.title }}</a>{% if r.data.draft %}<span class="pencil">draft</span>{% endif %}</li>{% endfor %}</ul>
+    {% else %}<p class="pencil">nothing here yet</p>{% endif %}
+</section>
 {% endfor %}
-</ul>

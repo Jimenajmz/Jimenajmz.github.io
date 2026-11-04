@@ -1,0 +1,13 @@
+---
+layout: base.njk
+---
+<div class="page-head"><h1>{{ title }}</h1></div>
+<div class="about">
+    <div class="body">
+{{ content | safe }}
+    </div>
+    <div class="photos">
+        {% set media = photos %}{% set label = 'Photos of Jimena' %}
+        {% include "viewer.njk" %}
+    </div>
+</div>

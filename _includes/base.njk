@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} · Jimena Jimenez</title>
+    {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+    <link rel="icon" type="image/png" sizes="32x32" href="/main/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Fraunces:opsz,wght@9..144,600&family=IBM+Plex+Mono:wght@400;500&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/brief.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="wrap">
+            <a class="brand" href="/"><span class="hl">Jimena</span> Jimenez</a>
+            <nav class="nav" aria-label="Sections">
+                <a {% if page.url == '/' %}class="active" {% endif %}href="/">Home</a>
+                <a {% if page.url.startsWith('/art/') %}class="active" {% endif %}href="/art/">Art</a>
+                <a {% if page.url.startsWith('/photography/') %}class="active" {% endif %}href="/photography/">Photography</a>
+                <a {% if page.url.startsWith('/about/') %}class="active" {% endif %}href="/about/">About me</a>
+                <a {% if page.url.startsWith('/recipes/') %}class="active" {% endif %}href="/recipes/">Recipes</a>
+                <a {% if page.url.startsWith('/blog/') %}class="active" {% endif %}href="/blog/">Blog</a>
+                <a {% if page.url.startsWith('/projects/') %}class="active" {% endif %}href="/projects/">Projects</a>
+            </nav>
+        </div>
+    </header>
+    {% if page.url == '/' %}
+    <div class="ticker" aria-hidden="true"><div class="ticker-track">{% for i in [1, 2] %}<span>art</span>·<span>photography</span>·<span>recipes</span>·<span>writing</span>·<span>projects</span>·<span>made in Minnesota</span>·{% endfor %}</div></div>
+    {% endif %}
+    <main>
+        <div class="wrap">
+{{ content | safe }}
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="wrap">
+            <span>Jimena Jimenez · Rochester, Minnesota</span>
+            <span><a href="https://www.instagram.com/manezmade/">Instagram @ManezMade</a> · <a href="/main/first-webpage.html">my first webpage</a></span>
+        </div>
+    </footer>
+    <script src="/brief.js"></script>
+</body>
+</html>

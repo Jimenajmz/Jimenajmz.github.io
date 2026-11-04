@@ -1,0 +1,13 @@
+---
+title: Projects
+layout: base.njk
+---
+<div class="page-head"><h1>Projects</h1><p>The bigger stories, each with its own page.</p></div>
+<div class="projects">
+{% for p in collections.projects %}
+    <article class="project">
+        {% if p.data.photos and p.data.photos.length %}<img src="{{ p.data.photos[0].src }}" alt="{{ p.data.photos[0].alt or p.data.title }}">{% else %}<span class="blank" style="aspect-ratio:1/1;border:1px dashed var(--pencil);display:grid;place-items:center" class="pencil">no photo yet</span>{% endif %}
+        <div><h2><a href="{{ p.url }}">{{ p.data.title }}</a></h2><p>{{ p.data.summary }}</p><p class="meta"><a href="{{ p.url }}">Read the story →</a></p></div>
+    </article>
+{% endfor %}
+</div>

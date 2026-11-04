@@ -1,0 +1,17 @@
+{#- A gallery index: tag filters and a grid of square thumbnails, newest first.
+    Needs: items (a collection), base (its folder), kind (a word for the empty state). -#}
+{% set tagList = items | tagList %}
+{% if items.length %}
+<div class="filters" data-filters>
+    <button type="button" class="chip is-on" data-tag="">All</button>
+    {% for t in tagList %}<button type="button" class="chip" data-tag="{{ t }}">{{ t }}</button>{% endfor %}
+</div>
+<ul class="tiles">
+{% for item in items %}
+    <li class="tile" data-tags="{{ item | tagsOf | join(' ') }}"><a href="{{ item.url }}"><img src="{{ item | thumb }}" alt="{{ item.data.media[0].alt if item.data.media and item.data.media[0].alt else item.data.title }}" loading="lazy"><span class="tile-title">{{ item.data.title }}<span class="meta"> · {{ (item.data.created or item.date) | year }}</span></span></a></li>
+{% endfor %}
+</ul>
+<p class="empty" data-empty hidden>Nothing carries all of those tags yet.</p>
+{% else %}
+<p class="empty">No {{ kind }} yet. A post is a text file in the <code>{{ base }}</code> folder with its pictures in <code>images</code>; copy <code>templates/{{ base }}.md</code> to start.</p>
+{% endif %}

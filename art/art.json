@@ -1,3 +1,4 @@
 {
-  "layout": "layout.njk"
+  "layout": "gallery-post.njk",
+  "gallery": "art"
 }

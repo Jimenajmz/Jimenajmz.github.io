@@ -1,0 +1,15 @@
+---
+layout: base.njk
+---
+<article class="reading">
+    <div class="page-head">
+        <p class="meta"><a href="/projects/">projects</a></p>
+        <h1>{{ title }}</h1>
+        {% if summary %}<p class="pencil">{{ summary }}</p>{% endif %}
+    </div>
+    {% if links %}<ul class="links">{% for l in links %}<li{% if not l.url %} class="todo"{% endif %}>{% if l.url %}<a href="{{ l.url }}">{{ l.label }}</a>{% else %}{{ l.label }}{% endif %}</li>{% endfor %}</ul>{% endif %}
+    {% if photos and photos.length %}{% set media = photos %}{% set label = title + ' photos' %}{% include "viewer.njk" %}{% endif %}
+    <div class="body">
+{{ content | safe }}
+    </div>
+</article>

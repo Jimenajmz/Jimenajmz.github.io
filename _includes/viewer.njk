@@ -1,0 +1,21 @@
+{#- Media viewer for a list of media items: {src, alt, caption} | {video, caption} | {youtube, caption}.
+    Without JavaScript every item shows, stacked. With it, one at a time with controls. -#}
+<div class="viewer" data-viewer tabindex="0" aria-label="{{ label or 'Pictures' }}">
+    <div class="viewer-stage">
+    {% for m in media %}
+        <figure class="viewer-item">
+            {% if m.youtube %}<iframe src="https://www.youtube-nocookie.com/embed/{{ m.youtube }}" title="{{ m.caption or 'Video' }}" allow="fullscreen" loading="lazy"></iframe>
+            {% elif m.video %}<video controls preload="metadata" src="{{ m.video }}"></video>
+            {% else %}<img src="{{ m.src }}" alt="{{ m.alt or '' }}"{% if not loop.first %} loading="lazy"{% endif %}>{% endif %}
+            {% if m.caption %}<figcaption>{{ m.caption }}</figcaption>{% endif %}
+        </figure>
+    {% endfor %}
+    </div>
+    {% if media.length > 1 %}
+    <div class="viewer-controls">
+        <button type="button" data-prev aria-label="Previous">← prev</button>
+        <span class="meta" data-count>1 / {{ media.length }}</span>
+        <button type="button" data-next aria-label="Next">next →</button>
+    </div>
+    {% endif %}
+</div>

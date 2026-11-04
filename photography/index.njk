@@ -1,0 +1,7 @@
+---
+title: Photography
+layout: base.njk
+---
+<div class="page-head"><h1>Photography</h1><p>Pictures I took. Newest first. Pick a tag to filter by place, subject or year.</p></div>
+{% set items = collections.photography %}{% set base = 'photography' %}{% set kind = 'photos' %}
+{% include "gallery-index.njk" %}

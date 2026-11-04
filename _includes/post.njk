@@ -1,0 +1,18 @@
+---
+layout: base.njk
+---
+<article class="reading">
+    <div class="page-head">
+        <p class="meta">{{ page.date | niceDate }}</p>
+        <h1>{{ title }}</h1>
+        {% if summary %}<p class="pencil">{{ summary }}</p>{% endif %}
+    </div>
+    <div class="body">
+{{ content | safe }}
+    </div>
+</article>
+<nav class="pager" aria-label="More posts">
+    {% set newer = collections.blog | getPreviousCollectionItem %}{% set older = collections.blog | getNextCollectionItem %}
+    <span>{% if newer %}<a href="{{ newer.url }}">← {{ newer.data.title }}</a>{% endif %}</span>
+    <span>{% if older %}<a href="{{ older.url }}">{{ older.data.title }} →</a>{% endif %}</span>
+</nav>

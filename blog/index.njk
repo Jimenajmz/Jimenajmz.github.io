@@ -1,0 +1,12 @@
+---
+title: Blog
+layout: base.njk
+---
+<div class="page-head"><h1>Blog</h1><p>Notes and longer thoughts, newest first.</p></div>
+{% if collections.blog.length %}
+<ul class="list">
+{% for p in collections.blog %}
+    <li><span class="meta">{{ p.date | niceDate }}</span><h3><a href="{{ p.url }}">{{ p.data.title }}</a></h3>{% if p.data.summary %}<p>{{ p.data.summary }}</p>{% endif %}</li>
+{% endfor %}
+</ul>
+{% else %}<p class="empty">No posts yet. A post is a text file in the <code>blog</code> folder named like <code>2026-11-10-my-title.md</code>; copy <code>templates/post.md</code> to start.</p>{% endif %}

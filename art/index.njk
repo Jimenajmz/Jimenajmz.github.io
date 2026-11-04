@@ -1,12 +1,7 @@
 ---
 title: Art
+layout: base.njk
 ---
-<p>Paintings, drawings and crochet, newest first.</p>
-{% if collections.art.length == 0 %}
-<p>Nothing here yet. An art page is a text file in the <code>art</code> folder with its picture in <code>images</code>; copy <code>templates/art.md</code> to start.</p>
-{% endif %}
-<div class="art-grid">
-{% for a in collections.art %}
-  <figure><a href="{{ a.url }}"><img src="{{ a.data.image }}" alt="{{ a.data.title }}"></a><figcaption>{{ a.data.title }}</figcaption></figure>
-{% endfor %}
-</div>
+<div class="page-head"><h1>Art</h1><p>Illustration, printmaking, crochet and whatever else I made. Newest first. Pick a tag to filter.</p></div>
+{% set items = collections.art %}{% set base = 'art' %}{% set kind = 'artwork' %}
+{% include "gallery-index.njk" %}
