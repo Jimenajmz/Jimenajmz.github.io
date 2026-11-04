@@ -1,8 +1,10 @@
 // `npm test`: builds the site into _site/ and checks the result.
 // Fails if a page is missing or if a hand-written page was changed by the build.
 import { execSync } from 'node:child_process';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, rmSync } from 'node:fs';
 
+// Always a clean build: Eleventy does not remove files from _site/ whose source is gone.
+rmSync('_site', { recursive: true, force: true });
 execSync('npx eleventy', { stdio: 'inherit' });
 
 const mustExist = [
