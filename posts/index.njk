@@ -1,12 +1,15 @@
 ---
 title: Blog
+wide: true
 ---
-<p>Notes, newest first.</p>
-{% if collections.posts.length == 0 %}
-<p>No posts yet. A post is a text file in the <code>posts</code> folder named like <code>2026-11-10-my-title.md</code>; copy <code>templates/post.md</code> to start.</p>
-{% endif %}
-<ul class="card-list">
-{% for p in collections.posts %}
-  <li><a href="{{ p.url }}">{{ p.data.title }}</a><span class="when">{{ p.date | niceDate }}</span>{% if p.data.summary %}<span class="summary">{{ p.data.summary }}</span>{% endif %}</li>
-{% endfor %}
-</ul>
+<article class="paper">
+    <span class="tape tape-left" aria-hidden="true"></span><span class="tape tape-right" aria-hidden="true"></span>
+    <h1 class="page-title">Blog</h1>
+    <p class="lead">Notes, newest first.</p>
+    {% if collections.posts.length == 0 %}<p>No posts yet. A post is a text file in the <code>posts</code> folder named like <code>2026-11-10-my-title.md</code>; copy <code>templates/post.md</code> to start.</p>{% endif %}
+    <ul class="journal">
+    {% for p in collections.posts %}
+        <li><span class="when">{{ p.date | niceDate }}</span><a href="{{ p.url }}">{{ p.data.title }}</a>{% if p.data.summary %}<p class="summary">{{ p.data.summary }}</p>{% endif %}</li>
+    {% endfor %}
+    </ul>
+</article>

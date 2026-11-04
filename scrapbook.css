@@ -1,0 +1,168 @@
+/* Scrapbook theme for jimenajmz.com.
+   Built from Jimena's own pieces: the starry sky and star rain, her purples, Lustria and Mate,
+   her grid paper and the ghost cat. Caveat is the handwriting for labels and notes.
+   Her original pages under /main/ keep their own stylesheet and are not touched by this file. */
+
+:root {
+  --ink: #2c1d31;
+  --plum: rgb(134, 77, 156);
+  --grape: rgb(86, 43, 99);
+  --lilac: #b89cc2;
+  --lilac-light: #dcc9e3;
+  --sheet: #fffdf9;
+  --line: rgba(134, 77, 156, 0.16);
+  --sticky: #fff3a8;
+}
+
+* { box-sizing: border-box; }
+html { background: #07050b; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #07050b url('/main/images/star.gif');
+  color: var(--ink);
+  font-family: 'Mate', Georgia, serif;
+  font-size: 16px;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  cursor: url('/main/images/cursor.cur'), auto;
+  overflow-x: hidden;
+}
+a { color: var(--grape); }
+a:hover { color: var(--plum); cursor: url('/main/images/Gengar_Cursor.cur'), pointer; }
+img { max-width: 100%; height: auto; }
+
+/* Star rain, the same effect as her pages (scrapbook.js) */
+#snow-container { position: fixed; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.star { position: absolute; top: -20px; color: #fff; text-shadow: 0 0 5px #fff, 0 0 20px #fff; animation: fall 5s linear forwards; }
+.star::before { content: "\f005"; font-family: "Font Awesome 6 Free"; font-weight: 900; }
+@keyframes fall {
+  0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+/* Cover: the name and the index tabs */
+.cover, .book, .colophon { position: relative; z-index: 1; width: min(920px, 100% - 24px); margin: 0 auto; }
+.cover { padding: 24px 0 0; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px 24px; }
+.brand { font-family: 'Lustria', serif; font-size: 28px; color: #fff; text-decoration: none; letter-spacing: 3px; text-shadow: 0 0 14px rgba(184, 156, 194, 0.9); padding-bottom: 6px; }
+.brand:hover { color: var(--lilac-light); }
+.brand i { color: var(--lilac); font-size: 20px; margin-right: 6px; }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.tabs a {
+  font-family: 'Caveat', cursive; font-size: 23px; line-height: 1;
+  padding: 10px 16px 8px; background: var(--lilac); color: var(--grape); text-decoration: none;
+  border-radius: 6px 6px 0 0; transform: rotate(-1.5deg); box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+}
+.tabs a:nth-child(even) { transform: rotate(1.5deg); }
+.tabs a:hover { background: var(--lilac-light); color: var(--grape); }
+.tabs a.active { background: var(--plum); color: #fff; }
+
+/* The book: a page of her grid paper, with things taped on it */
+.book {
+  background: #cfae87 url('/main/images/gridpaper.jpg');
+  background-size: 196px;
+  border-radius: 6px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+  padding: 36px 32px 40px;
+  display: flex; flex-direction: column; gap: 34px;
+}
+
+/* A white lined sheet */
+.paper {
+  position: relative;
+  background: var(--sheet) repeating-linear-gradient(transparent 0 27px, var(--line) 27px 28px);
+  padding: 30px 34px 26px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.28);
+  transform: rotate(-0.6deg);
+  line-height: 28px;
+}
+.paper:nth-child(even) { transform: rotate(0.5deg); }
+.paper > :last-child { margin-bottom: 0; }
+.paper.note { background: var(--sticky); transform: rotate(1.2deg); }
+
+.tape {
+  position: absolute; top: -13px; width: 120px; height: 30px;
+  background: repeating-linear-gradient(-45deg, rgba(184, 156, 194, 0.85) 0 10px, rgba(220, 201, 227, 0.85) 10px 20px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+.tape-left { left: 28px; transform: rotate(-5deg); }
+.tape-right { right: 28px; transform: rotate(6deg); }
+.tape-top { left: 50%; margin-left: -60px; transform: rotate(-2deg); }
+
+/* Type */
+h1, h2, h3 { font-family: 'Lustria', serif; color: var(--grape); line-height: 1.2; margin: 0 0 14px; }
+.page-title { font-size: 34px; text-align: center; }
+h2 { font-size: 24px; }
+h3 { font-size: 19px; }
+p, ul, ol { margin: 0 0 16px; }
+.lead { font-size: 18px; text-align: center; }
+.stamp, .scribble, .label, figcaption, .when { font-family: 'Caveat', cursive; }
+.stamp { display: inline-block; font-size: 20px; line-height: 1.2; color: var(--plum); border: 2px solid var(--plum); border-radius: 6px; padding: 2px 10px; transform: rotate(-3deg); margin-bottom: 14px; }
+.scribble { font-size: 22px; line-height: 1.3; color: var(--grape); }
+.paper img:not(.sticker) { border-radius: 4px; }
+code { background: rgba(184, 156, 194, 0.3); padding: 1px 6px; border-radius: 4px; font-size: 14px; }
+blockquote { margin: 0 0 16px; padding-left: 14px; border-left: 4px solid var(--lilac); color: var(--grape); }
+
+/* Home: the hero sheet, the likes as stickers, the ghost cat */
+.hero-paper { padding-right: 170px; padding-bottom: 40px; }
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 6px; }
+.tags span {
+  font-family: 'Caveat', cursive; font-size: 22px; line-height: 1; background: var(--lilac-light); color: var(--grape);
+  border: 1.5px solid var(--plum); border-radius: 999px; padding: 7px 14px 5px; transform: rotate(var(--r, 0deg));
+}
+.sticker { position: absolute; width: 160px; right: -16px; bottom: -40px; transform: rotate(10deg); filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.35)); }
+
+.spread { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.todo { padding-left: 26px; font-family: 'Caveat', cursive; font-size: 23px; line-height: 1.25; }
+.todo li { margin-bottom: 4px; }
+.todo li.done { text-decoration: line-through; color: var(--plum); }
+.todo li.done::after { content: "\2713"; text-decoration: none; display: inline-block; margin-left: 8px; }
+.latest { list-style: none; padding: 0; }
+.latest li { margin-bottom: 8px; }
+.label { font-size: 21px; color: var(--plum); margin-right: 8px; }
+
+/* Recipes: index cards */
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 20px; }
+.card {
+  display: block; background: var(--sheet); border-left: 8px solid var(--lilac); padding: 14px 16px 12px;
+  text-decoration: none; color: var(--ink); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); transform: rotate(var(--r, 0deg)); line-height: 1.5;
+}
+.card:hover { box-shadow: 0 8px 16px rgba(0, 0, 0, 0.28); color: var(--ink); }
+.card h3 { margin-bottom: 6px; }
+.card .summary { margin: 0; font-size: 15px; }
+
+/* Blog: journal entries */
+.journal { list-style: none; padding: 0; }
+.journal li { padding: 8px 0 12px; border-bottom: 1px dashed var(--lilac); }
+.journal li:last-child { border-bottom: 0; }
+.journal a { font-family: 'Lustria', serif; font-size: 20px; text-decoration: none; }
+.journal .when { font-size: 21px; color: var(--plum); display: block; line-height: 1.2; }
+.journal .summary { margin: 0; }
+
+/* Art: polaroids */
+.polaroids { display: flex; flex-wrap: wrap; gap: 26px; justify-content: center; }
+.polaroid { margin: 0; width: 210px; background: #fff; padding: 10px 10px 6px; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35); transform: rotate(var(--r, -2deg)); text-align: center; }
+.polaroid a { text-decoration: none; }
+.polaroid img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; border-radius: 2px; }
+.polaroid figcaption { font-size: 22px; color: var(--grape); margin-top: 8px; line-height: 1.2; }
+.polaroid.hero { width: min(380px, 100%); margin: 6px auto 22px; transform: rotate(-2deg); }
+.polaroid.hero img { aspect-ratio: auto; }
+.r1 { --r: -3deg; } .r2 { --r: 2deg; } .r3 { --r: -1deg; }
+
+.colophon { text-align: center; color: var(--lilac); font-family: 'Caveat', cursive; font-size: 21px; padding: 20px 0 32px; }
+
+@media (max-width: 700px) {
+  .spread { grid-template-columns: 1fr; }
+  .book { padding: 24px 14px 28px; gap: 28px; }
+  .paper { padding: 22px 18px 20px; transform: none; }
+  .paper:nth-child(even) { transform: none; }
+  .page-title { font-size: 28px; }
+  .hero-paper { padding-right: 18px; padding-bottom: 70px; }
+  .sticker { width: 110px; right: -8px; bottom: -30px; }
+  .tape { width: 90px; }
+  .tabs a { font-size: 20px; padding: 8px 12px 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .star { display: none; }
+}

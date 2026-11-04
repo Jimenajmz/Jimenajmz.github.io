@@ -1,15 +1,15 @@
 // How the site is built. Two kinds of page live here:
-//  1. Hand-written pages (index.html, everything under main/). They are copied exactly as written.
-//  2. Text pages (recipes/, posts/, art/ as Markdown). Eleventy wraps each in _includes/layout.njk,
-//     which uses the same stylesheet as the hand-written pages.
+//  1. Jimena's hand-written pages, everything under main/. They are copied exactly as written.
+//  2. Scrapbook pages: the home page (index.njk), about.md, and recipes/, posts/, art/ as
+//     Markdown. Eleventy wraps each in _includes/layout.njk, styled by scrapbook.css.
 // `npm start` previews the site; `npm test` builds it and checks the result.
 export default function (eleventyConfig) {
   // Hand-written pages and their files: copied byte for byte, no templating.
-  eleventyConfig.addPassthroughCopy('index.html');
   eleventyConfig.addPassthroughCopy('index.js');
-  eleventyConfig.addPassthroughCopy('style.css');
-  eleventyConfig.addPassthroughCopy('pages.css');
   eleventyConfig.addPassthroughCopy('main');
+  // The scrapbook theme (stylesheet and the star rain).
+  eleventyConfig.addPassthroughCopy('scrapbook.css');
+  eleventyConfig.addPassthroughCopy('scrapbook.js');
   // Pictures for text pages.
   eleventyConfig.addPassthroughCopy('images');
 

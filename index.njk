@@ -1,0 +1,54 @@
+---
+title: Home
+layout: layout.njk
+permalink: /index.html
+wide: true
+---
+<article class="paper hero-paper">
+    <span class="tape tape-left" aria-hidden="true"></span><span class="tape tape-right" aria-hidden="true"></span>
+    <h1 class="page-title">Hi, I'm Jimena!</h1>
+    <p class="lead">I'll just be adding stuff I like here.</p>
+    <p class="tags">
+        <span style="--r:-3deg">parrots</span><span style="--r:2deg">art</span><span style="--r:-1deg">circuits</span><span style="--r:3deg">cooking</span><span style="--r:-2deg">reading</span><span style="--r:1deg">painting</span><span style="--r:-3deg">crochet</span>
+    </p>
+    <img class="sticker" src="/main/images/GhostCat.PNG" alt="Ghost cat">
+</article>
+
+<div class="spread">
+    <article class="paper note">
+        <span class="tape tape-top" aria-hidden="true"></span>
+        <h2>Website TODO</h2>
+        <ol class="todo">
+            <li class="done">Create an About Me page</li>
+            <li class="done">Pick a coherent theme? Maybe scrapbook</li>
+            <li class="done">Recipe Page!</li>
+            <li class="done">Art portfolio??</li>
+            <li class="done">Blog Page</li>
+            <li>Draw pics for the scrap book theme</li>
+        </ol>
+        <p class="scribble">Nothing is complete on this website.... ooops!</p>
+    </article>
+
+    <article class="paper">
+        <span class="tape tape-top" aria-hidden="true"></span>
+        <h2>Latest</h2>
+        <ul class="latest">
+            <li><span class="label">Blog</span>{% if collections.posts.length %}<a href="{{ collections.posts[0].url }}">{{ collections.posts[0].data.title }}</a>{% else %}nothing yet{% endif %}</li>
+            <li><span class="label">Recipe</span>{% if collections.recipes.length %}<a href="{{ collections.recipes[0].url }}">{{ collections.recipes[0].data.title }}</a>{% else %}nothing yet{% endif %}</li>
+            <li><span class="label">Art</span>{% if collections.art.length %}<a href="{{ collections.art[0].url }}">{{ collections.art[0].data.title }}</a>{% else %}nothing yet{% endif %}</li>
+        </ul>
+        <p class="scribble">Thank you for visiting it in such an early state of development!</p>
+    </article>
+</div>
+
+{% if collections.art.length %}
+<section class="paper">
+    <span class="tape tape-left" aria-hidden="true"></span><span class="tape tape-right" aria-hidden="true"></span>
+    <h2>On the wall</h2>
+    <div class="polaroids">
+    {% for a in collections.art %}{% if loop.index <= 3 %}
+        <figure class="polaroid {{ ['r1', 'r2', 'r3'][loop.index0 % 3] }}"><a href="{{ a.url }}"><img src="{{ a.data.image }}" alt="{{ a.data.title }}"><figcaption>{{ a.data.title }}</figcaption></a></figure>
+    {% endif %}{% endfor %}
+    </div>
+</section>
+{% endif %}

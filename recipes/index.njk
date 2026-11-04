@@ -1,12 +1,15 @@
 ---
 title: Recipes
+wide: true
 ---
-<p>Things I cook, in alphabetical order.</p>
-{% if collections.recipes.length == 0 %}
-<p>No recipes yet. The first one is a text file in the <code>recipes</code> folder; copy <code>templates/recipe.md</code> to start.</p>
-{% endif %}
-<ul class="card-list">
-{% for r in collections.recipes %}
-  <li><a href="{{ r.url }}">{{ r.data.title }}</a>{% if r.data.summary %}<span class="summary">{{ r.data.summary }}</span>{% endif %}</li>
-{% endfor %}
-</ul>
+<article class="paper">
+    <span class="tape tape-left" aria-hidden="true"></span><span class="tape tape-right" aria-hidden="true"></span>
+    <h1 class="page-title">Recipes</h1>
+    <p class="lead">Things I cook, in alphabetical order.</p>
+    {% if collections.recipes.length == 0 %}<p>No recipes yet. Copy <code>templates/recipe.md</code> into the <code>recipes</code> folder to add the first one.</p>{% endif %}
+    <div class="cards">
+    {% for r in collections.recipes %}
+        <a class="card {{ ['r1', 'r2', 'r3'][loop.index0 % 3] }}" href="{{ r.url }}"><h3>{{ r.data.title }}</h3>{% if r.data.summary %}<p class="summary">{{ r.data.summary }}</p>{% endif %}</a>
+    {% endfor %}
+    </div>
+</article>

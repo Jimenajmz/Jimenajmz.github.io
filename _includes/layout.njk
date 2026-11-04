@@ -3,37 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/main/styles/style.css">
-    <link rel="stylesheet" type="text/css" href="/pages.css">
-    <link href="https://fonts.googleapis.com/css?family=Lustria|Mate" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/main/images/favicon.png">
     <title>{{ title }} · JMAJMZ</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/main/images/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Lustria&family=Mate&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="/scrapbook.css">
 </head>
 <body>
-    <div id="snow-container"></div>
-    <div class="title-container">
-        <h1>{{ title }}</h1>
-    </div>
-    <div class="top">
-        <div class="main-content">
-            <div class="post page">
-                {% if date and page.inputPath.includes('/posts/') %}<p class="meta">{{ date | niceDate }}</p>{% endif %}
-                {% if image %}<img src="{{ image }}" alt="{{ title }}">{% endif %}
-                {{ content | safe }}
-            </div>
-        </div>
-        <div class="sidebar">
-            <h2 class='navigation-title'>Navigations</h2>
-            <div class='navi-links'>
-                <a href="/main/main.html" title="Home">Home</a>
-                <a href="/main/aboutme.html" title="About Me">About Me</a>
-                <a {% if page.url.startsWith('/recipes/') %}class="active" {% endif %}href="/recipes/" title="Recipes">Recipes</a>
-                <a {% if page.url.startsWith('/art/') %}class="active" {% endif %}href="/art/" title="Art">Art</a>
-                <a {% if page.url.startsWith('/posts/') %}class="active" {% endif %}href="/posts/" title="Blog">Blog</a>
-            </div>
-        </div>
-    </div>
-    <script src="/main/main.js"></script>
+    <div id="snow-container" aria-hidden="true"></div>
+    <header class="cover">
+        <a class="brand" href="/"><i class="fa-solid fa-star" aria-hidden="true"></i>JMAJMZ</a>
+        <nav class="tabs" aria-label="Pages">
+            <a {% if page.url == '/' %}class="active" {% endif %}href="/">Home</a>
+            <a {% if page.url.startsWith('/about/') %}class="active" {% endif %}href="/about/">About me</a>
+            <a {% if page.url.startsWith('/recipes/') %}class="active" {% endif %}href="/recipes/">Recipes</a>
+            <a {% if page.url.startsWith('/art/') %}class="active" {% endif %}href="/art/">Art</a>
+            <a {% if page.url.startsWith('/posts/') %}class="active" {% endif %}href="/posts/">Blog</a>
+        </nav>
+    </header>
+    <main class="book">
+{% if wide %}
+{{ content | safe }}
+{% else %}
+        <article class="paper">
+            <span class="tape tape-left" aria-hidden="true"></span><span class="tape tape-right" aria-hidden="true"></span>
+            <h1 class="page-title">{{ title }}</h1>
+            {% if page.inputPath.includes('/posts/') %}<p class="stamp">{{ date | niceDate }}</p>{% endif %}
+            {% if image %}<figure class="polaroid hero"><img src="{{ image }}" alt="{{ title }}">{% if medium %}<figcaption>{{ medium }}</figcaption>{% endif %}</figure>{% endif %}
+            {{ content | safe }}
+        </article>
+{% endif %}
+    </main>
+    <footer class="colophon">Made by Jimena, mostly when she was supposed to be sleeping :)</footer>
+    <script src="/scrapbook.js"></script>
 </body>
 </html>

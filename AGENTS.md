@@ -6,7 +6,9 @@ This is Jimena's personal site. She is learning HTML and CSS, and the site is he
 
 | Part | Where | How it is published |
 | --- | --- | --- |
-| Hand-written pages | `index.html`, `main/` (main.html, aboutme.html, projects.html, styles, images, main.js) | Copied exactly as written. Do not rewrite them unless Jimena asks |
+| Her hand-written pages | `main/` (main.html, first-webpage.html, aboutme.html, projects.html, styles, images, main.js) | Copied exactly as written. Do not rewrite them unless Jimena asks |
+| Home and About | `index.njk`, `about.md` | Scrapbook pages built by Eleventy with `_includes/layout.njk` |
+| The scrapbook look | `scrapbook.css`, `scrapbook.js` | One stylesheet and the star rain. Her colours, fonts, grid paper and ghost cat |
 | Recipes | `recipes/*.md` | Eleventy turns each file into a page using `_includes/layout.njk` |
 | Blog posts | `posts/YYYY-MM-DD-title.md` | Same. The date in the file name is the post date |
 | Art | `art/*.md` with `image:` in the front matter | Same, plus a thumbnail on the Art page |
@@ -32,7 +34,7 @@ A push to `main` runs `.github/workflows/deploy.yml`: build, test, upload to AWS
 
 ## Style
 
-Her look lives in `main/styles/style.css`: purples (`#b89cc2`, `rgb(134, 77, 156)`, `#2c1d31`), Mate for text and Lustria for headings, white cards with purple borders and rounded corners, the star rain from `main/main.js`. New pages reuse all of it through the layout; `pages.css` only adjusts the card for long content. Her voice is playful. Keep it.
+Her look started in `main/styles/style.css` and the scrapbook theme in `scrapbook.css` is built from it: purples (`#b89cc2`, `rgb(134, 77, 156)`, `#2c1d31`), Mate for text, Lustria for headings, Caveat for handwritten labels, her grid paper as the page, white lined sheets, washi tape, sticky notes and polaroids, the star rain. Her voice is playful. Keep it.
 
 ## Hosting
 

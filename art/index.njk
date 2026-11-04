@@ -1,12 +1,15 @@
 ---
 title: Art
+wide: true
 ---
-<p>Paintings, drawings and crochet, newest first.</p>
-{% if collections.art.length == 0 %}
-<p>Nothing here yet. An art page is a text file in the <code>art</code> folder with its picture in <code>images</code>; copy <code>templates/art.md</code> to start.</p>
-{% endif %}
-<div class="art-grid">
-{% for a in collections.art %}
-  <figure><a href="{{ a.url }}"><img src="{{ a.data.image }}" alt="{{ a.data.title }}"></a><figcaption>{{ a.data.title }}</figcaption></figure>
-{% endfor %}
-</div>
+<article class="paper">
+    <span class="tape tape-left" aria-hidden="true"></span><span class="tape tape-right" aria-hidden="true"></span>
+    <h1 class="page-title">Art</h1>
+    <p class="lead">Paintings, drawings and crochet, newest first.</p>
+    {% if collections.art.length == 0 %}<p>Nothing here yet. An art page is a text file in the <code>art</code> folder with its picture in <code>images</code>; copy <code>templates/art.md</code> to start.</p>{% endif %}
+    <div class="polaroids">
+    {% for a in collections.art %}
+        <figure class="polaroid {{ ['r1', 'r2', 'r3'][loop.index0 % 3] }}"><a href="{{ a.url }}"><img src="{{ a.data.image }}" alt="{{ a.data.title }}"><figcaption>{{ a.data.title }}</figcaption></a></figure>
+    {% endfor %}
+    </div>
+</article>
