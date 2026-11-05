@@ -11,8 +11,12 @@ layout: base.njk
     {% include "viewer.njk" %}
     <aside class="details">
         <dl>
+            {% if gallery == "photography" %}
+            {% if created %}<dt>Taken</dt><dd>{{ created | niceDate }}</dd>{% endif %}
+            {% else %}
             {% if created %}<dt>Made</dt><dd>{{ created | niceDate }}</dd>{% endif %}
             <dt>Posted</dt><dd>{{ page.date | niceDate }}</dd>
+            {% endif %}
             {% if medium %}<dt>Medium</dt><dd>{{ medium }}</dd>{% endif %}
             {% if location %}<dt>Where</dt><dd>{{ location }}</dd>{% endif %}
             {% if camera %}<dt>Camera</dt><dd>{{ camera }}</dd>{% endif %}
