@@ -67,7 +67,7 @@ describe('JimenaSiteStack', () => {
         }
     })
 
-    it('lets only the main branch of her repo deploy, through GitHub OIDC, and only to this site', () => {
+    it('lets only the main and site branches of her repo deploy, through GitHub OIDC, and only to this site', () => {
         template.hasResourceProperties('AWS::IAM::Role', {
             RoleName: 'jimenajmz-github-deploy',
             AssumeRolePolicyDocument: Match.objectLike({
@@ -76,7 +76,7 @@ describe('JimenaSiteStack', () => {
                     Condition: {
                         StringEquals: {
                             'token.actions.githubusercontent.com:aud': 'sts.amazonaws.com',
-                            'token.actions.githubusercontent.com:sub': 'repo:Jimenajmz/Jimenajmz.github.io:ref:refs/heads/main',
+                            'token.actions.githubusercontent.com:sub': ['repo:Jimenajmz/Jimenajmz.github.io:ref:refs/heads/main', 'repo:Jimenajmz/Jimenajmz.github.io:ref:refs/heads/site'],
                         },
                     },
                 })],

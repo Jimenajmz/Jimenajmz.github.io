@@ -4,9 +4,9 @@ export const CONFIG = {
     region: 'us-east-1',
     /** The site. www redirects to it. */
     domain: 'jimenajmz.com',
-    /** GitHub repo and branch allowed to deploy (the OIDC trust is this exact value). */
+    /** GitHub repo and branches allowed to deploy (the OIDC trust lists exactly these). `site` is the preview branch until the domain moves. */
     repo: 'Jimenajmz/Jimenajmz.github.io',
-    branch: 'main',
+    branches: ['main', 'site'],
     /**
      * Serve on the real domain: certificate, aliases and DNS records. Off until the domain's
      * name servers at Squarespace point at the zone this stack creates; the certificate cannot

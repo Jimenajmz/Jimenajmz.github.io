@@ -103,11 +103,11 @@ export class SiteStack extends cdk.Stack {
         })
         const deployRole = new iam.Role(this, 'DeployRole', {
             roleName: `${CONFIG.project}-github-deploy`,
-            description: `Lets ${CONFIG.repo} (branch ${CONFIG.branch}) upload the site and refresh the cache`,
+            description: `Lets ${CONFIG.repo} (branches ${CONFIG.branches.join(', ')}) upload the site and refresh the cache`,
             assumedBy: new iam.OpenIdConnectPrincipal(github, {
                 StringEquals: {
                     'token.actions.githubusercontent.com:aud': 'sts.amazonaws.com',
-                    'token.actions.githubusercontent.com:sub': `repo:${CONFIG.repo}:ref:refs/heads/${CONFIG.branch}`,
+                    'token.actions.githubusercontent.com:sub': CONFIG.branches.map((b) => `repo:${CONFIG.repo}:ref:refs/heads/${b}`),
                 },
             }),
             maxSessionDuration: cdk.Duration.hours(1),
