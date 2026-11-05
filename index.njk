@@ -29,7 +29,7 @@ description: "Jimena Jiménez's website: art, photography, recipes, writing and 
     <a href="/recipes/">{% if r and r.data.images %}<img src="{{ r.data.images[0].src }}" alt="">{% else %}<span class="blank">food</span>{% endif %}<span><h3>Recipes</h3><p>Costa Rican, Minnesotan, and picked up along the way.</p></span></a>
     <a href="/blog/"><span class="blank">words</span><span><h3>Blog</h3><p>Notes and longer thoughts, newest first.</p></span></a>
     {% set pj = collections.projects | first %}
-    <a href="/projects/">{% if pj and pj.data.photos %}<img src="{{ pj.data.photos[0].src }}" alt="">{% else %}<span class="blank">work</span>{% endif %}<span><h3>Projects</h3><p>The makerspace, engineering, and MenezMade.</p></span></a>
+    <a href="/projects/">{% if pj and pj.data.photos %}<img src="{{ pj.data.photos[0].src }}" alt="">{% else %}<span class="blank">work</span>{% endif %}<span><h3>Projects</h3><p>The makerspace, engineering, and Menez Made.</p></span></a>
 </nav>
 
 {% if collections.art.length or collections.photography.length %}
