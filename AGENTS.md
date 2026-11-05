@@ -50,6 +50,10 @@ White background, black text, a subtle light-grey engineering grid, notes in bla
 - An admin area to edit all sections from a browser. The plan is a file-based CMS (Decap or Sveltia) that edits these same text files in the repo, with a sign-in, so nothing here changes shape.
 - A simple newsletter, as a separate feature.
 
+## Decisions log
+
+- 2026-11-04: Jimena approved publishing the rebuilt site (the brief version) to jimenajmz.com. Her original hand-written site is archived in git as the tag `old-site-2026-11-04` and the branch `archive/old-site`, and its pages stay published unchanged under `/main/` (home: `/main/first-webpage.html`). She and Dave work as a team on this site and on Med City Makerspace; she uses Claude Code on her own Claude Pro plan.
+
 ## Hosting
 
 AWS account 045738173554, a member of Dave's organization. One stack, `JimenaSiteStack`, in `infra/`. Details in `infra/README.md`. Dave and his Claude run it; Jimena never needs an AWS login.
