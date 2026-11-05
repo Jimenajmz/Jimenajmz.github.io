@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% set pageTitle = ('Jimena Jiménez · Art, photography, recipes and MenezMade' if page.url == '/' else title + ' · Jimena Jiménez') %}
+    {% set pageTitle = ('Jimena Jiménez · Art, photography, recipes and Menez Made' if page.url == '/' else (seoTitle or title) + ' · Jimena Jiménez') %}
     {% set pageDesc = description or summary or site.description %}
     {% set pageUrl = site.url + page.url %}
     {% set pageImage = (site.url + media[0].src) if (media and media[0].src and media[0].src.startsWith('/images/')) else '' %}
@@ -18,8 +18,8 @@
     {% if pageImage %}<meta property="og:image" content="{{ pageImage }}">
     <meta name="twitter:card" content="summary_large_image">{% else %}<meta name="twitter:card" content="summary">{% endif %}
     {% set person = { "@type": "Person", "name": site.name, "url": site.url + "/", "sameAs": [site.instagram], "address": { "@type": "PostalAddress", "addressLocality": "Rochester", "addressRegion": "MN", "addressCountry": "US" } } %}
-    {% set menezmade = { "@type": "Organization", "name": "MenezMade", "alternateName": ["Menez Made", "@MenezMade"], "url": site.url + "/projects/menezmade/", "description": "Handmade arts and crafts by Jimena Jiménez: sewn and crocheted plushies, pins, art prints and earrings.", "founder": person, "sameAs": [site.instagram] } %}
-    {% set graph = [ { "@type": "WebSite", "name": site.name, "alternateName": "MenezMade", "url": site.url + "/" }, person, menezmade ] if (page.url == '/' or page.url == '/projects/menezmade/') else [ { "@type": "WebSite", "name": site.name, "url": site.url + "/" }, person ] %}
+    {% set menezmade = { "@type": "Organization", "name": "Menez Made", "alternateName": ["MenezMade", "@MenezMade"], "url": site.url + "/projects/menezmade/", "description": "Handmade arts and crafts by Jimena Jiménez: sewn and crocheted plushies, pins, art prints and earrings.", "founder": person, "sameAs": [site.instagram] } %}
+    {% set graph = [ { "@type": "WebSite", "name": site.name, "alternateName": "Menez Made", "url": site.url + "/" }, person, menezmade ] if (page.url == '/' or page.url == '/projects/menezmade/') else [ { "@type": "WebSite", "name": site.name, "url": site.url + "/" }, person ] %}
     <script type="application/ld+json">{{ { "@context": "https://schema.org", "@graph": graph } | dump | safe }}</script>
     <link rel="icon" type="image/png" sizes="32x32" href="/main/images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
