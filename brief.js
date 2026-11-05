@@ -13,7 +13,7 @@
       var on = chips.filter(function (c) { return c.dataset.tag && c.classList.contains('is-on'); }).map(function (c) { return c.dataset.tag; });
       var shown = 0;
       tiles.forEach(function (t) {
-        var tags = (t.dataset.tags || '').split(' ');
+        var tags = (t.dataset.tags || '').split('|');
         var show = on.length === 0 || on.some(function (tag) { return tags.indexOf(tag) !== -1; });
         t.classList.toggle('is-hidden', !show);
         if (show) shown += 1;

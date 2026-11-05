@@ -21,11 +21,11 @@ export default function (eleventyConfig) {
   eleventyConfig.addFilter('niceDate', (value) =>
     new Date(value).toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }));
   eleventyConfig.addFilter('year', (value) => (value ? String(new Date(value).getUTCFullYear()) : ''));
-  // The tags a gallery post can be filtered by: its medium, its year, and any extra tags.
+  // The tags a gallery post can be filtered by: its medium, its camera, its year, and any extra tags.
   const tagsOf = (item) => {
     const d = item.data;
     const year = d.created ?? item.date;
-    return [d.medium, year ? String(new Date(year).getUTCFullYear()) : null, ...(d.tags ?? [])]
+    return [d.medium, d.camera, year ? String(new Date(year).getUTCFullYear()) : null, ...(d.tags ?? [])]
       .filter(Boolean).map((t) => String(t).toLowerCase());
   };
   eleventyConfig.addFilter('tagsOf', tagsOf);

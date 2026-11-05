@@ -2,6 +2,7 @@
 title: Morning on the river
 created: 2026-11-10
 location: Rochester, Minnesota
+camera: RX100 II
 tags: [landscape, film]
 credits:
 media:

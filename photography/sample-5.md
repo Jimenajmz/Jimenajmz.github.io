@@ -2,6 +2,7 @@
 title: Sample photo 5
 created: 2024-11-11
 location: Minneapolis
+camera: RX100 II
 tags: [street]
 media:
   - src: /images/photo-sample-5.png

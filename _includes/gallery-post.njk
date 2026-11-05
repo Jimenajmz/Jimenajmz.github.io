@@ -15,13 +15,14 @@ layout: base.njk
             <dt>Posted</dt><dd>{{ page.date | niceDate }}</dd>
             {% if medium %}<dt>Medium</dt><dd>{{ medium }}</dd>{% endif %}
             {% if location %}<dt>Where</dt><dd>{{ location }}</dd>{% endif %}
+            {% if camera %}<dt>Camera</dt><dd>{{ camera }}</dd>{% endif %}
             {% if credits %}<dt>Credits</dt><dd>{{ credits }}</dd>{% endif %}
         </dl>
         <div class="body">
 {{ content | safe }}
         </div>
-        {% set mine = { data: { medium: medium, created: created, tags: tags }, date: page.date } | tagsOf %}
-        <div class="tagline">{% for t in mine %}<a href="/{{ gallery }}/?tag={{ t }}">{{ t }}</a>{% endfor %}</div>
+        {% set mine = { data: { medium: medium, camera: camera, created: created, tags: tags }, date: page.date } | tagsOf %}
+        <div class="tagline">{% for t in mine %}<a href="/{{ gallery }}/?tag={{ t | urlencode }}">{{ t }}</a>{% endfor %}</div>
     </aside>
 </div>
 {% set newer = items | getPreviousCollectionItem %}{% set older = items | getNextCollectionItem %}

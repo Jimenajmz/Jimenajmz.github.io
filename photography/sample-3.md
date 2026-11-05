@@ -2,6 +2,7 @@
 title: Sample photo 3
 created: 2025-08-09
 location: Costa Rica
+camera: RX100 II
 tags: [landscape, film]
 media:
   - src: /images/photo-sample-3.png
