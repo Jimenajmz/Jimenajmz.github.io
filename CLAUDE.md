@@ -1,6 +1,8 @@
 # jimenajmz.com
 
-Read `AGENTS.md` first. It is the one rules file for this repo: what the site is, where each kind of page lives, how a change goes live, and what never to do.
+The one rules file for this repo is `AGENTS.md`: what the site is, where each kind of page lives, how a change goes live, and what never to do. It is pulled in here so Claude Code always has it:
+
+@AGENTS.md
 
 Working with Jimena (this is her site; she has basic programming experience):
 
