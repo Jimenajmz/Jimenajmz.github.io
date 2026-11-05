@@ -2,7 +2,7 @@
 title: Sample photo 4
 created: 2025-03-22
 location: Rochester, Minnesota
-camera: RX100 II
+camera: Sony RX100 II
 tags: [birds]
 media:
   - src: /images/photo-sample-4.png

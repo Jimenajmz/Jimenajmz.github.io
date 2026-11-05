@@ -22,10 +22,13 @@ export default function (eleventyConfig) {
     new Date(value).toLocaleDateString('en-US', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }));
   eleventyConfig.addFilter('year', (value) => (value ? String(new Date(value).getUTCFullYear()) : ''));
   // The tags a gallery post can be filtered by: its medium, its camera, its year, and any extra tags.
+  // A camera's tag is its name without the brand: "Sony RX100 II" is tagged "RX100 II".
+  const cameraBrands = /^(sony|canon|nikon|fujifilm|fuji|olympus|om system|panasonic|lumix|leica|ricoh|pentax|kodak|minolta|hasselblad|apple|google|samsung)\s+/i;
+  const cameraTag = (camera) => (camera ? String(camera).replace(cameraBrands, '') : null);
   const tagsOf = (item) => {
     const d = item.data;
     const year = d.created ?? item.date;
-    return [d.medium, d.camera, year ? String(new Date(year).getUTCFullYear()) : null, ...(d.tags ?? [])]
+    return [d.medium, cameraTag(d.camera), year ? String(new Date(year).getUTCFullYear()) : null, ...(d.tags ?? [])]
       .filter(Boolean).map((t) => String(t).toLowerCase());
   };
   eleventyConfig.addFilter('tagsOf', tagsOf);

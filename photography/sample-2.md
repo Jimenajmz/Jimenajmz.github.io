@@ -2,7 +2,7 @@
 title: Sample photo 2
 created: 2026-06-18
 location: Minneapolis
-camera: RX100 II
+camera: Sony RX100 II
 tags: [portrait]
 media:
   - src: /images/photo-sample-2.png

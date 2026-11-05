@@ -2,7 +2,7 @@
 title: Sample photo 6
 created: 2024-01-05
 location: Costa Rica
-camera: RX100 II
+camera: Sony RX100 II
 tags: [landscape]
 media:
   - src: /images/photo-sample-6.png

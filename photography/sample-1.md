@@ -2,7 +2,7 @@
 title: Sample photo 1
 created: 2026-10-02
 location: Rochester, Minnesota
-camera: RX100 II
+camera: Sony RX100 II
 tags: [street, film]
 media:
   - src: /images/photo-sample-1.png
