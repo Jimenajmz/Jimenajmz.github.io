@@ -1,6 +1,6 @@
 # Rules for anyone, and any bot, working on jimenajmz.com
 
-This is Jimena's personal site, built to her requirements brief (October 2026): a scrapbook on engineering graph paper. Cursor, Grok and Claude all read this file; keep it short and keep it true.
+This is Jimena's personal site, built to her requirements brief (October 2026): a scrapbook on engineering graph paper. Jimena works on it with Claude Code; Dave's Claude helps with hosting. Every bot reads this file; keep it short and keep it true.
 
 ## What the site is
 
@@ -22,11 +22,16 @@ This is Jimena's personal site, built to her requirements brief (October 2026): 
 
 - `npm install` once after cloning.
 - `npm start` previews at http://localhost:8080 and reloads when a file is saved.
-- `npm test` builds the site and checks the result. Run it before pushing.
+- `npm test` builds the site and checks the result. Run it before pushing. Claude Code runs it after every change.
 
 ## How a change goes live
 
-A push to `main` runs two workflows: `pages.yml` builds the site and publishes it to GitHub Pages (jimenajmz.com, while the domain points there), and `deploy.yml` uploads the same build to the AWS hosting. About two minutes. Until the first merge, the new site lives on a branch; pushing to that branch changes nothing live. When more than one person is editing, work on a branch and open a pull request.
+Two branches, two addresses:
+
+- `site` is the working branch. A push to it runs `deploy.yml`, which builds the site and puts it on the preview address, https://dmbvhwvb3agh1.cloudfront.net, within about two minutes. Nothing public changes.
+- `main` is the live site. A push to it runs `pages.yml`, which publishes jimenajmz.com through GitHub Pages. To go live with what is on `site`, merge `site` into `main` (a pull request on GitHub, or ask Claude Code to open one).
+
+Later, when the domain moves to AWS, `deploy.yml` goes back to publishing `main` and the preview address becomes the live one.
 
 ## The look, in her words
 
@@ -35,7 +40,7 @@ White background, black text, a subtle light-grey engineering grid, notes in bla
 ## Never
 
 - Put passwords, keys or tokens in the repo. None are needed; the deploy signs in to AWS without any.
-- Change `.github/workflows/deploy.yml` or anything in `infra/` without Dave.
+- Change anything under `.github/workflows/` or `infra/` without Dave.
 - Add trackers, ads or analytics.
 - Edit anything under `main/`.
 - Add a new colour, font or decoration without a reason the brief would agree with.

@@ -1,10 +1,17 @@
 # jimenajmz.com
 
-Read `AGENTS.md` first. It is the one rules file for this repo and applies to Claude too.
+Read `AGENTS.md` first. It is the one rules file for this repo: what the site is, where each kind of page lives, how a change goes live, and what never to do.
 
-For Claude in particular:
+Working with Jimena (this is her site; she is not a programmer):
 
-- Never deploy the site by hand. A push to `main` deploys it through GitHub Actions.
+- Explain in plain words, one step at a time. Say which file you changed and why.
+- Make the change, run `npm test`, then commit and push to the `site` branch so the preview address updates. Tell her the preview is at https://dmbvhwvb3agh1.cloudfront.net and takes about two minutes.
+- Going live is her decision: only merge `site` into `main` when she asks.
+- Start a new page from the matching file in `templates/`.
+- Pictures: she adds them under `images/`; keep each under 1 MB and use a short, descriptive file name.
+
+For Dave's Claude only:
+
 - Infrastructure: `cd infra && npm test && npx cdk deploy --profile jimenajmz --require-approval never`. The `jimenajmz` profile assumes the organization role into account 045738173554.
 - One heavy job at a time on Dave's machine (build, test, deploy). Jest runs with `-w 2`.
-- Changes to Jimena's own pages go through a pull request she approves, unless she says otherwise.
+- Never deploy the site by hand; the workflows do it.

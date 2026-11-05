@@ -1,11 +1,13 @@
-# Publishes the site when main changes: build, test, upload to AWS, refresh the cache.
+# Publishes the working branch to the AWS preview address: build, test, upload, refresh the cache.
+# Until the domain moves to AWS, `site` is the branch shown there and `main` stays on GitHub
+# Pages (pages.yml). After the domain switch, change `site` back to `main` here.
 # Signs in to AWS through GitHub's identity token (no stored keys). The role, bucket and
 # distribution below belong to the JimenaSiteStack in infra/.
-name: Deploy the site
+name: Publish the preview
 
 on:
   push:
-    branches: [main]
+    branches: [site]
   workflow_dispatch:
 
 permissions:
