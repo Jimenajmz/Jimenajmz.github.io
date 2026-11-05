@@ -17,6 +17,7 @@ This is Jimena's personal site, built to her requirements brief (October 2026): 
 | Starting points | `templates/` | Copy one into the right folder and fill it in |
 | Her original pages | `main/` | Her first site, kept exactly as written and still published. Do not edit |
 | The look | `brief.css`, `brief.js`, `_includes/` | One stylesheet, one small script (tag filter, media viewer), the page layouts |
+| Search engines | `_data/site.json`, `_includes/base.njk`, `robots.txt.njk`, `sitemap.njk` | Every page gets a title, description, canonical link, social preview and structured data (the site name, Jimena, and MenezMade). A page can set its own `description:`. `/sitemap.xml` lists every page. No trackers |
 
 ## Commands
 

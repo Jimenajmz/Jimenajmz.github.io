@@ -10,7 +10,7 @@ execSync('npx eleventy', { stdio: 'inherit' });
 const mustExist = [
   'index.html', 'art/index.html', 'photography/index.html', 'about/index.html',
   'recipes/index.html', 'blog/index.html', 'projects/index.html', '404.html',
-  'brief.css', 'brief.js',
+  'brief.css', 'brief.js', 'robots.txt', 'sitemap.xml',
   'main/main.html', 'main/main.js', 'main/styles/style.css', 'main/images/favicon.png',
   'main/first-webpage.html', 'main/first-webpage.css',
 ];
