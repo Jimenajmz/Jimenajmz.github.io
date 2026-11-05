@@ -1,5 +1,5 @@
 ---
-title: Sunset over the water
+title: Sunset with Gustav over Alviso
 created: 2026-09-28
 location: Santa Clara, California
 camera: Sony RX100 II
