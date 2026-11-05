@@ -3,8 +3,8 @@ title: MenezMade
 order: 3
 summary: Arts and crafts, sold now and then since the Rainbow Loom days.
 links:
-  - label: Instagram @ManezMade
-    url: https://www.instagram.com/manezmade/
+  - label: Instagram @MenezMade
+    url: https://www.instagram.com/menezmade/
 photos:
   - src: /images/project-sample.png
     alt: Placeholder, a couple of photos go here
