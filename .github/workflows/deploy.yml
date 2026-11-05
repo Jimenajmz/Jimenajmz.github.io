@@ -5,9 +5,9 @@
 # distribution below belong to the JimenaSiteStack in infra/.
 name: Publish the preview
 
+# Manual for now (Actions > Publish the preview > Run workflow). Switch back to
+# `push: branches: [site]` once the deploy role in infra/ trusts the site branch.
 on:
-  push:
-    branches: [site]
   workflow_dispatch:
 
 permissions:
