@@ -2,9 +2,9 @@
 
 Read `AGENTS.md` first. It is the one rules file for this repo: what the site is, where each kind of page lives, how a change goes live, and what never to do.
 
-Working with Jimena (this is her site; she is not a programmer):
+Working with Jimena (this is her site; she has basic programming experience):
 
-- Explain in plain words, one step at a time. Say which file you changed and why.
+- Explain in plain words, one step at a time. Say which file you changed and why. She can read code; she does not want to be buried in it.
 - Make the change, run `npm test`, then commit and push to the `site` branch so the preview address updates. Tell her the preview is at https://dmbvhwvb3agh1.cloudfront.net and takes about two minutes.
 - Going live is her decision: only merge `site` into `main` when she asks.
 - Start a new page from the matching file in `templates/`.
