@@ -32,22 +32,27 @@ difficulty: easy
 
 **Rice**
 
-- 1 cup rice
-- 2 cups water
-- 1 Tbsp vegetable oil
-- 1/4 onion, finely chopped
-- 1 garlic clove, minced
-- 1 Tbsp chopped cilantro
-- 1/2 tsp salt
+- Rice
+- Water
+- Vegetable oil
+- Onion
+- Garlic
+- Cilantro
+- Salt
 
 **Beans**
 
-- 1 can of black beans (15 oz)
-- 1 Tbsp vegetable oil
-- 1/4 onion, diced
-- 1 garlic clove, minced
-- 1 Tbsp chopped cilantro
-- Salt, to taste
+- Black beans
+- Vegetable oil
+- Onion
+- Garlic
+- Tomato
+- Jalapeños
+- Red pepper
+- Oregano
+- Onion powder
+- Garlic powder
+- Adobo
 
 ## Steps
 
@@ -64,16 +69,24 @@ difficulty: easy
 
 **The rice**
 
-1. Heat the oil at the bottom of a pot. Add the onion and garlic and cook for 2 to 3 minutes.
-2. Add the rice and cook it for a bit, stirring.
-3. Add the water, cilantro and salt.
-4. Boil on high until you see bubbles from the rice and there is no more water on top.
-5. Turn the heat to low and cover for 10 minutes. Then uncover, wait another 10 minutes, and fluff with a fork.
+1. Put oil at the bottom of a pot and heat it up.
+2. Throw in finely chopped onion and garlic.
+3. Cook for 2 to 3 minutes.
+4. Add the rice and cook it for a bit.
+5. Add twice the amount of water as rice, and fresh cilantro.
+6. Add salt.
+7. Boil on high until you see bubbles from the rice and there is no more water.
+8. Turn the heat to low, let it rest, and stir.
+9. Cover for 10 minutes.
+10. Then uncover and wait another 10 minutes.
 
 **The beans**
 
-1. Heat the oil in a pan. Cook the onion and garlic until the onion is translucent.
-2. Add the beans with a little of their juice and the cilantro.
-3. Simmer for 10 minutes, and add salt to taste.
+1. Mince the garlic, and dice the onion, tomato and jalapeños.
+2. Put the onion and garlic on the stove until the onion becomes translucent.
+3. Add the tomato and jalapeños.
+4. When the tomato and jalapeños soften, add the beans (try to add only half the bean juice).
+5. Season with red pepper, oregano, onion powder, garlic powder and adobo.
+6. Cook for 10 minutes.
 
 Serve the picadillo over the rice, with the beans on the side.
