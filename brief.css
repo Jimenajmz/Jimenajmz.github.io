@@ -139,6 +139,7 @@ main { padding: 36px 0 56px; }
 .viewer-item figcaption { font-size: 13px; color: var(--pencil); margin-top: 6px; }
 .viewer.is-js .viewer-item { display: none; margin: 0; }
 .viewer.is-js .viewer-item.is-current { display: block; }
+.viewer.is-js .viewer-stage { touch-action: pan-y; }
 .viewer-controls { display: none; align-items: center; gap: 12px; margin-top: 12px; }
 .viewer.is-js .viewer-controls { display: flex; }
 .viewer-controls button { font: inherit; background: var(--paper); border: 1.5px solid var(--ink); padding: 6px 12px; cursor: pointer; }

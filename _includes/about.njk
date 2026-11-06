@@ -16,6 +16,7 @@ layout: base.njk
         {% for item in collections.photography %}{% if 'me' in (item | tagsOf) and item.data.media and item.data.media[0] %}
             {% set _ = media.push({ src: item.data.media[0].src, alt: item.data.media[0].alt, caption: item.data.title, note: 'These photos come from the <a href="/photography/?tag=me">photography tab</a>.' }) %}
         {% endif %}{% endfor %}
+        {% for ph in photos %}{% set _ = media.push({ src: ph.src, alt: ph.alt, caption: ph.caption }) %}{% endfor %}
         {% set label = 'Photos of Jimena' %}
         {% include "viewer.njk" %}
     </div>

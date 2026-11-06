@@ -2,7 +2,7 @@
 // 1. Gallery tag filter: click tags to show the posts that carry ANY of the chosen tags.
 //    A link like /art/?tag=illustration pre-selects a tag.
 // 2. Media viewer: on a post with several pictures or videos, show one at a time with
-//    previous and next buttons and the arrow keys. Also used for the About me photos.
+//    previous and next buttons, the arrow keys, or a swipe on a phone. Also used for the About me photos.
 (function () {
   var filters = document.querySelector('[data-filters]');
   if (filters) {
@@ -48,6 +48,17 @@
     viewer.classList.add('is-js');
     viewer.querySelector('[data-prev]').addEventListener('click', function () { show(index - 1); });
     viewer.querySelector('[data-next]').addEventListener('click', function () { show(index + 1); });
+    var startX = null, startY = null;
+    viewer.addEventListener('touchstart', function (e) {
+      if (e.touches.length !== 1) { startX = null; return; }
+      startX = e.touches[0].clientX; startY = e.touches[0].clientY;
+    }, { passive: true });
+    viewer.addEventListener('touchend', function (e) {
+      if (startX === null) return;
+      var dx = e.changedTouches[0].clientX - startX, dy = e.changedTouches[0].clientY - startY;
+      startX = null;
+      if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy) * 1.5) show(dx < 0 ? index + 1 : index - 1);
+    }, { passive: true });
     viewer.addEventListener('keydown', function (e) {
       if (e.key === 'ArrowLeft') show(index - 1);
       if (e.key === 'ArrowRight') show(index + 1);
