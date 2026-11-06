@@ -9,7 +9,7 @@ images:
   - src: /images/gallo-pinto.jpg
     alt: A plate of gallo pinto with eggs
 ---
-<!-- Copy this file to recipes/gallo-pinto.md. category is one of: Appetizers, Breakfast, Lunch, Dinner, Desserts, Snacks.
+<!-- Copy this file to recipes/gallo-pinto.md. category is one of: Appetizers, Breakfast, Entrees, Desserts.
      rating is your own, 1 to 5. Delete this comment. -->
 
 A sentence or two about the recipe.

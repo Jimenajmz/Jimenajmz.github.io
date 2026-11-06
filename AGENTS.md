@@ -10,7 +10,7 @@ This is Jimena's personal site, built to her requirements brief (October 2026): 
 | Art gallery | `art/*.md` | One file per post. `created` (when it was made), `medium`, optional `tags`, `location`, `credits`, and a `media` list of pictures or videos. The year and the medium become filter tags |
 | Photography gallery | `photography/*.md` | Same shape as art (but `created` shows as "Taken" and there is no Posted date), with `location`, `camera` (full name under Where, e.g. Sony RX100 II; the filter tag drops the brand, so RX100 II) and `tags` instead of `medium` |
 | About me | `about.md` | Text on the left, a `photos` list on the right, one at a time |
-| Recipes | `recipes/*.md` | `category` (Appetizers, Breakfast, Lunch, Dinner, Desserts, Snacks), `prep`, `total`, `difficulty`, `rating` 1 to 5, optional `images`; then Ingredients and Steps |
+| Recipes | `recipes/*.md` | `category` (Appetizers, Breakfast, Entrees, Desserts), `prep`, `total`, `difficulty`, `rating` 1 to 5, optional `images`; then Ingredients and Steps |
 | Blog | `blog/YYYY-MM-DD-title.md` | The date in the file name is the post date. Newest first |
 | Projects | `projects/*.md` | `order`, `summary`, optional `links` and `photos`, then the story |
 | Pictures and videos | `images/` (and `videos/` if used) | Keep pictures under 1 MB; long videos belong on YouTube, embedded with `youtube: VIDEOID` |
