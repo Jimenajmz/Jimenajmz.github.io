@@ -1,7 +1,7 @@
 ---
 title: Bachelor of Electrical Engineering
 order: 2
-summary: From mechanical engineering to a photobioreactor, a startup summer, and ASIC physical design.
+summary: Graduated with a Bachelor of Electrical Engineering in December 2025.
 ---
 In 2020, I applied to study mechanical engineering. I did not know much about the field yet, but it sounded interesting: I liked making things and was good at math. About a month into college, I began working on research to develop a photobioreactor. I mainly 3D-printed and finished parts and read scientific literature, but I also began learning 3D modeling. The research project grew into a startup that was later accepted into Y Combinator's Summer 2022 batch. I joined the team as an intern that summer and even lived in the same house as the rest of the team. During that summer, I helped develop a three-axis liquid-handling robot to automate a laboratory procedure for chemical mutagenesis.
 

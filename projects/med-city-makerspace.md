@@ -1,7 +1,7 @@
 ---
 title: Med City Makerspace
 order: 1
-summary: Helping start a makerspace in Rochester, Minnesota.
+summary: Starting a makerspace in Rochester, Minnesota.
 links:
   - label: medcitymakerspace.com
     url: https://medcitymakerspace.com
