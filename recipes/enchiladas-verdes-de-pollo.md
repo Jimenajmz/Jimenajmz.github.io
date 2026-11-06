@@ -1,5 +1,5 @@
 ---
-title: Green Chicken Enchiladas
+title: Enchiladas verdes de pollo
 category: Entrees
 ---
 ## Ingredients
