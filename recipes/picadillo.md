@@ -19,7 +19,6 @@ difficulty: easy
 - 1 chicken bouillon cube (the water and bouillon make the chicken broth)
 - 2 medium potatoes, peeled and cubed
 - 2 medium carrots, peeled and cubed
-- 1/4 cup raisins
 - 2 Tbsp chopped cilantro
 - 1/2 cup green peas, thawed
 - 1/4 cup green olives
@@ -59,7 +58,7 @@ difficulty: easy
 3. Add the ground beef and seasonings and cook, breaking the beef into pieces with the back of a spoon, until lightly browned.
 4. Add the tomato sauce.
 5. Add the water and chicken bouillon and bring to a boil. Lower the heat, cover, and cook for about 10 to 15 minutes, or until the beef is cooked through.
-6. Add the potatoes, carrots, raisins and cilantro, cover, and continue to simmer for about 3 to 5 minutes, or until tender.
+6. Add the potatoes, carrots and cilantro, cover, and continue to simmer for about 3 to 5 minutes, or until tender.
 7. Add the green peas and olives.
 8. Continue to cook until the sauce is reduced and thickened. Season with salt and pepper to taste.
 
