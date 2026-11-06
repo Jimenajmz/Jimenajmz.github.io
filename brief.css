@@ -156,6 +156,7 @@ main { padding: 36px 0 56px; }
 .about { display: grid; grid-template-columns: 1.2fr 1fr; gap: 36px; align-items: start; }
 .about .body { font-family: var(--read); font-size: 17.5px; line-height: 1.65; }
 .about .photos { position: relative; }
+.about .photos-note { margin-top: 14px; }
 .about .photos .viewer-item img { padding: 10px 10px 34px; box-shadow: 4px 4px 0 var(--ink); }
 
 /* Long reading: blog posts, projects, recipes */

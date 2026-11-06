@@ -7,7 +7,13 @@ layout: base.njk
 {{ content | safe }}
     </div>
     <div class="photos">
-        {% set media = photos %}{% set label = 'Photos of Jimena' %}
+        {#- The photos here are every Photography post tagged "me", newest first. -#}
+        {% set media = [] %}
+        {% for item in collections.photography %}{% if 'me' in (item | tagsOf) and item.data.media and item.data.media[0] %}
+            {% set _ = media.push({ src: item.data.media[0].src, alt: item.data.media[0].alt, caption: item.data.title }) %}
+        {% endif %}{% endfor %}
+        {% set label = 'Photos of Jimena' %}
         {% include "viewer.njk" %}
+        <p class="meta photos-note">These photos come from the <a href="/photography/?tag=me">Photography tab</a>, the ones tagged Me.</p>
     </div>
 </div>

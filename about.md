@@ -1,13 +1,6 @@
 ---
 title: About me
 layout: about.njk
-photos:
-  - src: /images/about-sample-1.png
-    alt: Placeholder, a photo of Jimena goes here
-    caption: a photo goes here
-  - src: /images/about-sample-2.png
-    alt: Placeholder, a second photo of Jimena goes here
-    caption: and another
 ---
 <p class="pencil">Draft, written from your brief. Edit freely.</p>
 
