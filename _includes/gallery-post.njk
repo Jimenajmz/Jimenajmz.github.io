@@ -25,7 +25,7 @@ layout: base.njk
         <div class="body">
 {{ content | safe }}
         </div>
-        {% set mine = { data: { medium: medium, camera: camera, created: created, tags: tags }, date: page.date } | tagsOf %}
+        {% set mine = { data: { medium: medium, mediumTag: mediumTag, camera: camera, created: created, tags: tags }, date: page.date } | tagsOf %}
         <div class="tagline">{% for t in mine %}<a href="/{{ gallery }}/?tag={{ t | urlencode }}">{{ t }}</a>{% endfor %}</div>
     </aside>
 </div>

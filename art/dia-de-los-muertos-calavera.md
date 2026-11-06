@@ -2,6 +2,7 @@
 title: Día de los Muertos Calavera
 created: 2025-11-01
 medium: Plywood and Acrylic
+mediumTag: false
 tags: [traditional art, wood art]
 media:
   - src: /images/dia-de-los-muertos-calavera.jpg

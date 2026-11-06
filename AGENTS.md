@@ -7,7 +7,7 @@ This is Jimena's personal site, built to her requirements brief (October 2026): 
 | Part | Where | Notes |
 | --- | --- | --- |
 | Home | `index.njk` | Welcome, a map of the sections, the latest pictures, the projects band |
-| Art gallery | `art/*.md` | One file per post. `created` (when it was made), `medium`, optional `tags`, `location`, `credits`, and a `media` list of pictures or videos. The year and the medium become filter tags |
+| Art gallery | `art/*.md` | One file per post. `created` (when it was made), `medium`, optional `tags`, `location`, `credits`, and a `media` list of pictures or videos. The year and the medium become filter tags (add `mediumTag: false` to show the medium without a tag) |
 | Photography gallery | `photography/*.md` | Same shape as art (but `created` shows as "Taken" and there is no Posted date), with `location`, `camera` (full name under Where, e.g. Sony RX100 II; the filter tag drops the brand, so RX100 II) and `tags` instead of `medium` |
 | About me | `about.md` | Text on the left, a `photos` list on the right, one at a time |
 | Recipes | `recipes/*.md` | `category` (Appetizers, Breakfast, Entrees, Desserts), `prep`, `total`, `difficulty`, `rating` 1 to 5, optional `images`; then Ingredients and Steps |
