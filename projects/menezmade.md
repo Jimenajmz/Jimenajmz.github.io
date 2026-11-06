@@ -1,7 +1,7 @@
 ---
 title: Menez Made
 order: 3
-summary: Arts and crafts, sold now and then since the Rainbow Loom days.
+summary: Arts and makes, sold now and then since I was a kid.
 description: "Menez Made is Jimena Jiménez's handmade arts and crafts: sewn and crocheted plushies, pins, art prints and earrings, made in Rochester, Minnesota. Find @MenezMade on Instagram."
 links:
   - label: Instagram @MenezMade
