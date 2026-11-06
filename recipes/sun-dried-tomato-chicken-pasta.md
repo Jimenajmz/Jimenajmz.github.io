@@ -51,5 +51,5 @@ category: Entrees
 
 1. Dice the chicken into cubes.
 2. Toss it in a pan with oil from the sun-dried tomato jar and garlic.
-3. Toss in a shit ton of paprika, Italian seasoning and pepper flakes.
+3. Toss in a generous amount of paprika, Italian seasoning and pepper flakes.
 4. Cook, then add Parmesan cheese.
