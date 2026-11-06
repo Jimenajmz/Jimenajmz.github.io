@@ -9,7 +9,7 @@ category: Entrees
 - Pasta
 - Salt, a generous amount for the water
 
-**Sauce**
+**Creamy sun-dried tomato sauce**
 
 - Oil
 - Garlic, chopped
@@ -19,7 +19,7 @@ category: Entrees
 - Garlic powder
 - Black pepper
 - Heavy whipping cream
-- Cheese
+- Mozzarella cheese
 - Pasta water
 
 **Chicken**
@@ -38,13 +38,13 @@ category: Entrees
 
 1. Boil water with a generous amount of salt.
 
-**For the pasta sauce**
+**For the creamy sun-dried tomato sauce**
 
 1. Put oil and chopped garlic in a pot.
 2. Add chopped sun-dried tomatoes, tomato paste, Italian seasoning, garlic powder and black pepper.
 3. Add heavy whipping cream.
 4. Bring to a boil.
-5. Add cheese.
+5. Add mozzarella cheese.
 6. Add pasta water until it reaches your desired consistency.
 
 **For the chicken**
