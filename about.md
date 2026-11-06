@@ -1,9 +1,6 @@
 ---
 title: About me
 layout: about.njk
-photos:
-  - src: /images/about-parrots.jpg
-    alt: "Two small parrots perched side by side on a white rope perch with orange posts, one with an orange face and green body, the other with a dark grey-green head"
 ---
 <p class="pencil">Draft, written from your brief. Edit freely.</p>
 
