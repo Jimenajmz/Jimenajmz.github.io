@@ -20,7 +20,7 @@ difficulty: easy
 - 2 limes, squeezed (about 1/4 cup of juice)
 - Adobo, to taste
 
-**Seasonings (1 tsp of each, split between the fish and the vegetables)**
+**Seasonings**
 
 - Garlic powder
 - Onion powder
