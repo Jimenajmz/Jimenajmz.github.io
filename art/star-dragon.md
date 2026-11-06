@@ -6,5 +6,5 @@ media:
   - src: /images/star-dragon.webp
     alt: A pink dragon with a long blue and purple galaxy-patterned body coiled in a maze shape among clouds and stars
   - src: /images/star-dragon-framed.jpg
-    alt: "A hand holding up a white-framed, matted print of the Star Dragon in front of a house and tree, the dragon coiled in a maze shape in pink, blue and purple"
+    alt: "The Star Dragon print in a white frame with a cream mat, held at the edge by a hand with a dark red nail, the dragon coiled in a maze shape in pink, blue and purple"
 ---
