@@ -7,13 +7,16 @@ layout: base.njk
 {{ content | safe }}
     </div>
     <div class="photos">
-        {#- The photos here are every Photography post tagged "me", newest first. -#}
+        {#- The photos here: first the Med City Makerspace picture from Projects, then every Photography post tagged "me", newest first.
+            Only the Photography ones get the "come from the photography tab" note. -#}
         {% set media = [] %}
+        {% for p in collections.projects %}{% if p.fileSlug == 'med-city-makerspace' and p.data.photos and p.data.photos[0] %}
+            {% set _ = media.push({ src: p.data.photos[0].src, alt: p.data.photos[0].alt, caption: p.data.title }) %}
+        {% endif %}{% endfor %}
         {% for item in collections.photography %}{% if 'me' in (item | tagsOf) and item.data.media and item.data.media[0] %}
-            {% set _ = media.push({ src: item.data.media[0].src, alt: item.data.media[0].alt, caption: item.data.title }) %}
+            {% set _ = media.push({ src: item.data.media[0].src, alt: item.data.media[0].alt, caption: item.data.title, note: 'These photos come from the <a href="/photography/?tag=me">photography tab</a>.' }) %}
         {% endif %}{% endfor %}
         {% set label = 'Photos of Jimena' %}
         {% include "viewer.njk" %}
-        <p class="meta photos-note">These photos come from the <a href="/photography/?tag=me">photography tab</a>.</p>
     </div>
 </div>

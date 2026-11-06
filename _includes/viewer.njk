@@ -8,6 +8,7 @@
             {% elif m.video %}<video controls preload="metadata" src="{{ m.video }}"></video>
             {% else %}<img src="{{ m.src }}" alt="{{ m.alt or '' }}"{% if not loop.first %} loading="lazy"{% endif %}>{% endif %}
             {% if m.caption %}<figcaption>{{ m.caption }}</figcaption>{% endif %}
+            {% if m.note %}<p class="meta photos-note">{{ m.note | safe }}</p>{% endif %}
         </figure>
     {% endfor %}
     </div>
