@@ -21,8 +21,4 @@ My favorite hummus recipe, made in a blender with little prep.
 ## Steps
 
 1. Drain the can of chickpeas and dry them as best you can.
-2. Put the tahini, lemon juice, garlic, salt and cumin in a blender or food processor. Blend for about a minute, until pale and creamy.
-3. Add the chickpeas and the ice cubes. Blend until mostly smooth, stopping to scrape down the sides once or twice.
-4. With the blender running, pour in the olive oil slowly and keep blending until the hummus is silky and fluffy. If it is too thick, add one more ice cube.
-5. Taste it and add a pinch more salt or a squeeze more lemon if you like.
-6. Scoop it into a bowl and drizzle a little olive oil on top. Keep leftovers covered in the fridge.
+2. Throw everything into a blender and blend to your desired consistency.
