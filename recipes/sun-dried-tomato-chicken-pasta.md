@@ -7,7 +7,7 @@ category: Entrees
 **Pasta**
 
 - Pasta
-- Hella salt, for the water
+- Salt, a generous amount for the water
 
 **Sauce**
 
@@ -36,7 +36,7 @@ category: Entrees
 
 **Making the pasta**
 
-1. Boil water with hella salt.
+1. Boil water with a generous amount of salt.
 
 **For the pasta sauce**
 
