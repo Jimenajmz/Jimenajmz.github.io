@@ -113,10 +113,7 @@ main { padding: 36px 0 56px; }
 .projects-band li:nth-child(3n+2) a { border-left-color: var(--pink); }
 .projects-band li:nth-child(3n) a { border-left-color: var(--blue); }
 .projects-band li a:hover, .projects-band li a:focus-visible { background: #fff; color: var(--ink); transform: translateX(4px); }
-.projects-band li { --hl: var(--yellow); }
-.projects-band li:nth-child(3n+2) { --hl: var(--pink); }
-.projects-band li:nth-child(3n) { --hl: var(--blue); }
-.projects-band li strong { font-family: var(--serif); font-size: 19px; display: block; width: fit-content; margin-bottom: 8px; padding: 1px 8px; background: var(--hl); color: var(--ink); }
+.projects-band li strong { font-family: var(--serif); font-size: 19px; display: block; margin-bottom: 2px; }
 
 /* Gallery grid, tags, tiles */
 .filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
