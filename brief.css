@@ -52,12 +52,12 @@ p, ul, ol { margin: 0 0 14px; }
 /* A sheet of paper: white, pen border, small offset shadow */
 .sheet { background: var(--paper); border: 1.5px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); padding: 28px 30px; position: relative; }
 .sheet > :last-child { margin-bottom: 0; }
-.tape { position: absolute; top: -12px; width: 96px; height: 26px; background: rgba(255, 241, 118, 0.75); border: 1px solid rgba(20, 20, 20, 0.25); transform: rotate(-4deg); }
-.tape-pink { background: rgba(248, 187, 208, 0.8); transform: rotate(5deg); }
-.tape-blue { background: rgba(187, 222, 251, 0.85); transform: rotate(-2deg); }
+.tape { position: absolute; top: -19px; width: 124px; height: 38px; background-color: rgba(255, 241, 118, 0.8); background-image: repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.28) 0 3px, transparent 3px 8px); clip-path: polygon(0 0, 4% 12%, 0 25%, 4% 38%, 0 50%, 4% 62%, 0 75%, 4% 88%, 0 100%, 100% 100%, 96% 88%, 100% 75%, 96% 62%, 100% 50%, 96% 38%, 100% 25%, 96% 12%, 100% 0); transform: rotate(-4deg); }
+.tape-pink { background-color: rgba(255, 138, 209, 0.78); transform: rotate(5deg); }
+.tape-blue { background-color: rgba(111, 216, 255, 0.78); transform: rotate(-2deg); }
 .tape-left { left: 24px; }
 .tape-right { right: 24px; }
-.tape-center { left: 50%; margin-left: -48px; }
+.tape-center { left: 50%; margin-left: -62px; }
 
 /* Header and navigation */
 .topbar { border-bottom: 1.5px solid var(--ink); background: var(--paper); }
