@@ -45,7 +45,7 @@ description: "Jimena Jiménez's website: art, photography, recipes, writing and 
 {% endif %}
 
 {% if collections.projects.length %}
-<section class="kraft">
+<section class="projects-band">
     <div class="wrap">
         <div><h2>Projects</h2><p class="pencil">the bigger stories</p></div>
         <ul>{% for p in collections.projects %}<li><a href="{{ p.url }}"><strong>{{ p.data.title }}</strong>{{ p.data.summary }}</a></li>{% endfor %}</ul>
