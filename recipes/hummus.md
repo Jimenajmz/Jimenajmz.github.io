@@ -5,7 +5,7 @@ prep: 10 min
 total: 10 min
 difficulty: easy
 ---
-Creamy, smooth hummus you can make in one blender or food processor in about ten minutes. The ice cubes are the secret: they keep it light and fluffy. Serve it as a dip, a spread, or a snack.
+My favorite hummus recipe, made in a blender with little prep.
 
 ## Ingredients
 
@@ -20,7 +20,7 @@ Creamy, smooth hummus you can make in one blender or food processor in about ten
 
 ## Steps
 
-1. Drain the chickpeas and rinse them well under cold water.
+1. Drain the can of chickpeas and dry them as best you can.
 2. Put the tahini, lemon juice, garlic, salt and cumin in a blender or food processor. Blend for about a minute, until pale and creamy.
 3. Add the chickpeas and the ice cubes. Blend until mostly smooth, stopping to scrape down the sides once or twice.
 4. With the blender running, pour in the olive oil slowly and keep blending until the hummus is silky and fluffy. If it is too thick, add one more ice cube.
