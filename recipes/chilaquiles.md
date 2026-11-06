@@ -26,6 +26,9 @@ difficulty: easy
 **To serve**
 
 - Eggs
+- Crema
+- Onion, chopped
+- Cilantro, chopped
 
 ## Steps
 
@@ -44,4 +47,5 @@ difficulty: easy
 **Putting it together**
 
 1. Add the chips to the sauce and stir for about a minute, until they are coated but still a little crisp.
-2. Fry an egg for each serving and put it on top. Eat right away.
+2. Fry an egg for each serving and put it on top.
+3. Top with crema, chopped onion and cilantro. Eat right away.
