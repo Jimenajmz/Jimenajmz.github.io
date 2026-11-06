@@ -80,6 +80,9 @@ p, ul, ol { margin: 0 0 14px; }
 main { padding: 36px 0 56px; }
 .page-head { margin-bottom: 26px; }
 .page-head p { max-width: 62ch; }
+.page-head-photo { display: flex; flex-wrap: wrap; align-items: center; gap: 24px 36px; }
+.page-head-photo > div { flex: 1 1 360px; }
+.camera-photo { flex: 0 1 300px; width: 300px; max-width: 100%; height: auto; border: 1.5px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); }
 
 /* Home */
 .hero { display: grid; grid-template-columns: 1.4fr 1fr; gap: 36px; align-items: center; margin-bottom: 44px; }
