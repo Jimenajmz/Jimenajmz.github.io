@@ -22,3 +22,5 @@ My favorite hummus recipe, made in a blender with little prep.
 
 1. Drain the can of chickpeas and dry them as best you can.
 2. Throw everything into a blender and blend to your desired consistency.
+3. Scoop it into a bowl and top with paprika.
+4. Keep leftovers covered in the fridge.
