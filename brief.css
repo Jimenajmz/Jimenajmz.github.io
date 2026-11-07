@@ -91,7 +91,8 @@ main { padding: 36px 0 56px; }
 .hero h1 { font-size: 50px; margin-bottom: 16px; }
 .hero .lead { font-family: var(--read); font-size: 19px; line-height: 1.55; max-width: 48ch; }
 .hero-photo { position: relative; justify-self: center; transform: rotate(2deg); max-width: 360px; }
-.hero-photo img { border: 1.5px solid var(--ink); background: #fff; padding: 10px 10px 34px; box-shadow: 4px 4px 0 var(--ink); }
+/* A Polaroid: a square picture on a white card with a thicker bottom edge (card is about 88 x 107). */
+.hero-photo img { display: block; width: 100%; height: auto; box-sizing: border-box; border: 1.5px solid var(--ink); background: #fff; padding: 5% 5% 27%; box-shadow: 4px 4px 0 var(--ink); }
 .hero-photo figcaption { position: absolute; left: 0; right: 0; bottom: 10px; text-align: center; }
 .hero-note { position: absolute; right: -8px; top: -40px; transform: rotate(-6deg); }
 .section-title { display: flex; align-items: baseline; gap: 14px; margin-bottom: 18px; }
