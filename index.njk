@@ -23,7 +23,7 @@ description: "Jimena Jiménez's website: art, photography, recipes, writing and 
     <a href="/art/">{% if a %}<img src="{{ a | thumb }}" alt="">{% else %}<span class="blank">art</span>{% endif %}<span><h3>Art</h3><p>Illustration, printmaking, crochet. Newest first, filter by medium or year.</p></span></a>
     {% set ph = collections.photography | first %}
     <a href="/photography/">{% if ph %}<img src="{{ ph | thumb }}" alt="">{% else %}<span class="blank">photo</span>{% endif %}<span><h3>Photography</h3><p>Pictures, by place and subject.</p></span></a>
-    <a href="/about/"><img src="/images/about-sample-2.png" alt=""><span><h3>About me</h3><p>Who I am and what I do.</p></span></a>
+    <a href="/about/"><img src="/images/flash.jpg" alt="" style="object-position: 70% 50%"><span><h3>About me</h3><p>Who I am and what I do.</p></span></a>
     {% set r = collections.recipes | first %}
     <a href="/recipes/">{% if r and r.data.images %}<img src="{{ r.data.images[0].src }}" alt="">{% else %}<span class="blank">food</span>{% endif %}<span><h3>Recipes</h3><p>Costa Rican, Minnesotan, and picked up along the way.</p></span></a>
     <a href="/blog/"><span class="blank">words</span><span><h3>Blog</h3><p>Notes and longer thoughts, newest first.</p></span></a>
