@@ -28,11 +28,11 @@ Cook the rice separately from the beans.
 
 **Seasoning**
 
-- 1/2 tsp red pepper
-- 1 tsp oregano
-- 1 tsp onion powder
-- 1 tsp adobo
-- 1 tsp garlic powder
+- Red pepper
+- Oregano
+- Onion powder
+- Adobo
+- Garlic powder
 
 ## Steps
 
