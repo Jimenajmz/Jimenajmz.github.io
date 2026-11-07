@@ -42,7 +42,7 @@
         </div>
     </header>
     {% if page.url == '/' %}
-    <div class="ticker" aria-hidden="true"><div class="ticker-track">{% for i in [1, 2] %}<span>art</span>·<span>photography</span>·<span>recipes</span>·<span>writing</span>·<span>projects</span>·<span>made in Minnesota</span>·{% endfor %}</div></div>
+    <div class="ticker" aria-hidden="true"><div class="ticker-track">{% for i in range(0, 12) %}<span>art</span>·<span>photography</span>·<span>recipes</span>·<span>writing</span>·<span>projects</span>·<span>made in Minnesota</span>·{% endfor %}</div></div>
     {% endif %}
     <main>
         <div class="wrap">

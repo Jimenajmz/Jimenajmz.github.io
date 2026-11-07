@@ -72,7 +72,7 @@ p, ul, ol { margin: 0 0 14px; }
 .nav a:nth-child(3n) { --hl: var(--blue); }
 .nav a.active { border-bottom-color: var(--hl); background: linear-gradient(transparent 60%, var(--hl) 60%); }
 .ticker { border-bottom: 1.5px solid var(--ink); background: var(--paper); overflow: hidden; white-space: nowrap; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.12em; padding: 6px 0; }
-.ticker-track { display: inline-block; animation: ticker 48s linear infinite; }
+.ticker-track { display: inline-block; animation: ticker 290s linear infinite; }
 .ticker-track span { padding: 0 18px; }
 @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 
