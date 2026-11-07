@@ -29,7 +29,7 @@ export default function (eleventyConfig) {
     const d = item.data;
     const year = d.created ?? item.date;
     return [d.mediumTag === false ? null : d.medium, cameraTag(d.camera), year ? String(new Date(year).getUTCFullYear()) : null, ...(d.tags ?? [])]
-      .filter(Boolean).map((t) => String(t).toLowerCase());
+      .filter(Boolean).map((t) => String(t).toLowerCase()).filter((t, i, all) => all.indexOf(t) === i);
   };
   eleventyConfig.addFilter('tagsOf', tagsOf);
   eleventyConfig.addFilter('tagList', (items) => [...new Set(items.flatMap(tagsOf))].sort());
