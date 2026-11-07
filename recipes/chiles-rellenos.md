@@ -20,6 +20,7 @@ Cook the rice separately from the beans.
 - 1 yellow onion
 - 4 jalapeños
 - 1 tomato
+- 2 Tbsp tomato paste (or a small amount of ketchup)
 - 8 oz queso fresco
 - 1 1/2 cups shredded mozzarella cheese
 - 4 garlic cloves, minced
@@ -54,9 +55,10 @@ Cook the rice separately from the beans.
 1. Mince the rest of the garlic, and dice the rest of the onion, the tomato and the jalapeños.
 2. Heat the last Tbsp of oil in a pan. Cook the onion and garlic until the onion becomes translucent.
 3. Add the tomato and jalapeños.
-4. When the tomato and jalapeños soften, add the beans (try to add only half the bean juice).
-5. Season with the red pepper, oregano, onion powder, garlic powder and adobo.
-6. Cook for 10 minutes, then stir in the rest of the cilantro.
+4. When the tomato and jalapeños soften, stir in the tomato paste (or ketchup) and cook for a minute or two to finish the sofrito.
+5. Add the beans (try to add only half the bean juice).
+6. Season with the red pepper, oregano, onion powder, garlic powder and adobo.
+7. Cook for 10 minutes, then stir in the rest of the cilantro.
 
 **The chiles**
 
