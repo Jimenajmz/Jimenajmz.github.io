@@ -1,7 +1,7 @@
 ---
 title: The Hanging Man Card
 created: 2025-01-01
-medium: Plywood & Watercolors
+medium: Plywood and Watercolors
 mediumTag: false
 tags: [traditional art, wood art]
 media:
