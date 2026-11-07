@@ -50,6 +50,7 @@ images:
 - Onion
 - Garlic
 - Tomato
+- Tomato paste, 2 Tbsp (or a small amount of ketchup)
 - Jalapeños
 - Red pepper
 - Oregano
@@ -88,8 +89,9 @@ images:
 1. Mince the garlic, and dice the onion, tomato and jalapeños.
 2. Put the onion and garlic on the stove until the onion becomes translucent.
 3. Add the tomato and jalapeños.
-4. When the tomato and jalapeños soften, add the beans (try to add only half the bean juice).
-5. Season with red pepper, oregano, onion powder, garlic powder and adobo.
-6. Cook for 10 minutes.
+4. When the tomato and jalapeños soften, stir in the tomato paste (or ketchup) and cook for a minute or two to finish the sofrito.
+5. Add the beans (try to add only half the bean juice).
+6. Season with red pepper, oregano, onion powder, garlic powder and adobo.
+7. Cook for 10 minutes.
 
 Serve the picadillo over the rice, with the beans on the side.
