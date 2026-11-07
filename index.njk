@@ -26,7 +26,7 @@ description: "Jimena Jiménez's website: art, photography, recipes, writing and 
     <a href="/about/"><img src="/images/flash.jpg" alt="" style="object-position: 70% 50%"><span><h3>About me</h3><p>Who I am and what I do.</p></span></a>
     {% set r = collections.recipes | first %}
     <a href="/recipes/">{% if r and r.data.images %}<img src="{{ r.data.images[0].src }}" alt="">{% else %}<span class="blank">food</span>{% endif %}<span><h3>Recipes</h3><p>Costa Rican, Minnesotan, and picked up along the way.</p></span></a>
-    <a href="/blog/"><span class="blank blank-repeat" aria-hidden="true">{% for i in range(0, 30) %}blog {% endfor %}</span><span><h3>Blog</h3><p>Notes and longer thoughts, newest first.</p></span></a>
+    <a href="/blog/"><span class="blank blank-repeat" aria-hidden="true">{% for r in range(0, 6) %}<span class="blank-row">blog blog blog blog</span>{% endfor %}</span><span><h3>Blog</h3><p>Notes and longer thoughts, newest first.</p></span></a>
     {% set pj = collections.projects | first %}
     <a href="/projects/">{% if pj and pj.data.photos %}<img src="{{ pj.data.photos[0].src }}" alt="">{% else %}<span class="blank">work</span>{% endif %}<span><h3>Projects</h3><p>The makerspace, engineering, and Menez Made.</p></span></a>
 </nav>
