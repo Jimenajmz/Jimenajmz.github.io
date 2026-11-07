@@ -4,6 +4,9 @@ category: Entrees
 prep: 30 min
 total: 1 hr 15 min
 difficulty: medium
+images:
+  - src: /images/chiles-rellenos.jpg
+    alt: "Three white plates of chile relleno, a roasted poblano pepper with rice and black beans, around a plate of sliced avocado and fried plantains with cheese, and a container of pico de gallo"
 ---
 Cook the rice separately from the beans.
 

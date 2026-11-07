@@ -4,6 +4,9 @@ category: Entrees
 prep: 20 min
 total: 55 min
 difficulty: easy
+images:
+  - src: /images/picadillo.jpg
+    alt: "A skillet of picadillo, ground beef with diced carrots, potatoes and green olives in a tomato sauce, beside a pot of rice and a pot of black beans on a stovetop"
 ---
 ## Ingredients
 

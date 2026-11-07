@@ -4,6 +4,9 @@ category: Breakfast
 prep: 15 min
 total: 40 min
 difficulty: easy
+images:
+  - src: /images/chilaquiles.jpg
+    alt: "A white plate of chilaquiles in red sauce topped with crumbled cheese, sour cream, chopped onion and cilantro, with two runny fried eggs and a side of red rice"
 ---
 ## Ingredients
 

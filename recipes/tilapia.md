@@ -4,6 +4,9 @@ category: Entrees
 prep: 20 min
 total: 50 min
 difficulty: easy
+images:
+  - src: /images/tilapia.jpg
+    alt: "A blue bowl of rice topped with seasoned tilapia, onion and a spoonful of black beans with tomato and cilantro"
 ---
 ## Ingredients
 
