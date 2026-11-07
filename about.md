@@ -2,7 +2,7 @@
 title: About me
 layout: about.njk
 ---
-<p class="pencil">Draft, written from your brief. Edit freely.</p>
+<p class="pencil">Coming soon</p>
 
 Hi, I'm Jimena. I was born and raised in Minnesota, and I'm Costa Rican American. I have been making arts and crafts for as long as I can remember: sewn plushies, pins, prints, crochet, illustration, and lately silly little earrings.
 
