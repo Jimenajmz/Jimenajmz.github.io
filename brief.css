@@ -103,6 +103,7 @@ main { padding: 36px 0 56px; }
 .map a:hover { background: var(--paper); box-shadow: 3px 3px 0 var(--pink); }
 .map img { width: 72px; height: 72px; object-fit: cover; border: 1px solid var(--ink); }
 .map .blank { width: 72px; height: 72px; border: 1px dashed var(--pencil); display: grid; place-items: center; font-family: var(--pen); font-size: 20px; color: var(--pencil); }
+.map .blank-repeat { display: block; overflow: hidden; padding: 3px 4px; box-sizing: border-box; font-size: 15px; line-height: 1.05; text-align: center; word-spacing: 2px; }
 .map h3 { margin: 0 0 2px; }
 .map p { margin: 0; font-size: 13px; color: var(--pencil); }
 .projects-band { background-color: var(--ink); background-image: linear-gradient(rgba(255, 255, 255, 0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px); background-size: 24px 24px; color: #fff; padding: 36px 0; margin: 10px 0 44px calc(50% - 50vw); width: 100vw; }
